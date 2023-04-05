@@ -1,5 +1,5 @@
 # vsim -voptargs="+acc" -c work.arb2_bench -do "vcd add -dumpports -file "inPorts.vcd" -in arb2_bench/arb2_/*; vcd add -file "inPorts.vcd" arb2_bench/arb2_/*clk; run -all; exit" 
-# Start time: 16:22:19 on Apr 05,2023
+# Start time: 17:08:01 on Apr 05,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
 # //
@@ -22,5 +22,5 @@
 #  run -all
 # ** Note: $finish    : src/arb2_bench.v(26)
 #    Time: 50026 ns  Iteration: 0  Instance: /arb2_bench
-# End time: 16:22:20 on Apr 05,2023, Elapsed time: 0:00:01
+# End time: 17:08:02 on Apr 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

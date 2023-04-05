@@ -1,5 +1,5 @@
-# vsim -voptargs="+acc" -c work.ibex_multdiv_slow_bench -do "vcd add -dumpports -file "inPorts.vcd" -in ibex_multdiv_slow_bench/ibex_multdiv_slow_/*; vcd add -file "inPorts.vcd" ibex_multdiv_slow_bench/ibex_multdiv_slow_/*clk_i; run -all; exit" 
-# Start time: 16:45:48 on Apr 05,2023
+# vsim -L work94 work94.ibex_multdiv_slow_bench -c -voptargs="+acc" -do "vcd add -file "output/fp_num_94.vcd" ibex_multdiv_slow_bench/ibex_multdiv_slow_/*; run -all; quit" 
+# Start time: 17:41:29 on Apr 05,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
 # //
@@ -17,10 +17,9 @@
 # Loading sv_std.std
 # Loading work.ibex_multdiv_slow_bench(fast)
 # Loading work.ibex_multdiv_slow(fast)
-# vcd add -dumpports -file "inPorts.vcd" -in ibex_multdiv_slow_bench/ibex_multdiv_slow_/*
-#  vcd add -file "inPorts.vcd" ibex_multdiv_slow_bench/ibex_multdiv_slow_/*clk_i
+# vcd add -file "output/fp_num_94.vcd" ibex_multdiv_slow_bench/ibex_multdiv_slow_/*
 #  run -all
 # ** Note: $finish    : src/ibex_multdiv_slow_bench.v(46)
 #    Time: 50026 ns  Iteration: 0  Instance: /ibex_multdiv_slow_bench
-# End time: 16:45:49 on Apr 05,2023, Elapsed time: 0:00:01
+# End time: 17:41:30 on Apr 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

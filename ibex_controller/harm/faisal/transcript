@@ -1,7 +1,6 @@
-# vsim -L work140 work140.ibex_controller_bench -c -voptargs="+acc" -do "vcd add -file "output/fp_num_140.vcd" ibex_controller_bench/ibex_controller_/*; run -all; quit" 
-# Start time: 16:39:43 on Apr 05,2023
+# vsim -voptargs="+acc" -c work.ibex_controller_bench -do "vcd add -dumpports -file "inPorts.vcd" -in ibex_controller_bench/ibex_controller_/*; vcd add -file "inPorts.vcd" ibex_controller_bench/ibex_controller_/*clk_i; run -all; exit" 
+# Start time: 17:36:17 on Apr 05,2023
 # ** Note: (vsim-3812) Design is being optimized...
-# Break key hit
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
 # //
 # //  Copyright 1991-2019 Mentor Graphics Corporation
@@ -15,14 +14,13 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Error loading design
-# End time: 16:39:44 on Apr 05,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-t/fp_num_129.vcd" ibex_controller_bench/ibex_controller_/*
+# Loading sv_std.std
+# Loading work.ibex_controller_bench(fast)
+# Loading work.ibex_controller(fast)
+# vcd add -dumpports -file "inPorts.vcd" -in ibex_controller_bench/ibex_controller_/*
+#  vcd add -file "inPorts.vcd" ibex_controller_bench/ibex_controller_/*clk_i
 #  run -all
-# Break key hit
-# Break in Module ibex_controller at src/ibex_controller.v line 231
-# Stopped at src/ibex_controller.v line 231
-#  quit
-# End time: 16:39:43 on Apr 05,2023, Elapsed time: 0:00:01
+# ** Note: $finish    : src/ibex_controller_bench.v(130)
+#    Time: 50026 ns  Iteration: 0  Instance: /ibex_controller_bench
+# End time: 17:36:18 on Apr 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

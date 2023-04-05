@@ -1,5 +1,5 @@
 # vsim -voptargs="+acc" -c work.ibex_id_stage_bench -do "vcd add -dumpports -file "inPorts.vcd" -in ibex_id_stage_bench/ibex_id_stage_/*; vcd add -file "inPorts.vcd" ibex_id_stage_bench/ibex_id_stage_/*clk_i; run -all; exit" 
-# Start time: 15:23:28 on Apr 05,2023
+# Start time: 17:15:53 on Apr 05,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "ibex_controller(fast)".
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
@@ -26,5 +26,5 @@
 #  run -all
 # ** Note: $finish    : src/ibex_id_stage_bench.v(180)
 #    Time: 50026 ns  Iteration: 0  Instance: /ibex_id_stage_bench
-# End time: 15:23:29 on Apr 05,2023, Elapsed time: 0:00:01
+# End time: 17:15:54 on Apr 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

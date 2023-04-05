@@ -1,5 +1,5 @@
-# vsim -voptargs="+acc" -c work.ibex_compressed_decoder_bench -do "vcd add -dumpports -file "output/out.vcd" -out ibex_compressed_decoder_bench/ibex_compressed_decoder_/*; vcd add -file "output/out.vcd" ibex_compressed_decoder_bench/ibex_compressed_decoder_/*clk; run -all; exit" 
-# Start time: 14:46:26 on Apr 05,2023
+# vsim -voptargs="+acc" -c work.ibex_compressed_decoder_bench -do "vcd add -dumpports -file "inPorts.vcd" -in ibex_compressed_decoder_bench/ibex_compressed_decoder_/*; vcd add -file "inPorts.vcd" ibex_compressed_decoder_bench/ibex_compressed_decoder_/*clk; run -all; exit" 
+# Start time: 17:11:29 on Apr 05,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
 # //
@@ -17,10 +17,10 @@
 # Loading sv_std.std
 # Loading work.ibex_compressed_decoder_bench(fast)
 # Loading work.ibex_compressed_decoder(fast)
-# vcd add -dumpports -file "output/out.vcd" -out ibex_compressed_decoder_bench/ibex_compressed_decoder_/*
-#  vcd add -file "output/out.vcd" ibex_compressed_decoder_bench/ibex_compressed_decoder_/*clk
+# vcd add -dumpports -file "inPorts.vcd" -in ibex_compressed_decoder_bench/ibex_compressed_decoder_/*
+#  vcd add -file "inPorts.vcd" ibex_compressed_decoder_bench/ibex_compressed_decoder_/*clk
 #  run -all
 # ** Note: $finish    : src/ibex_compressed_decoder_bench.v(28)
 #    Time: 50026 ns  Iteration: 0  Instance: /ibex_compressed_decoder_bench
-# End time: 14:46:29 on Apr 05,2023, Elapsed time: 0:00:03
+# End time: 17:11:30 on Apr 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
