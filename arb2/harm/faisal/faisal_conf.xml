@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<faisal>
+    <vlog arguments="-sv src/arb2.v src/arb2_bench.v" />
+    <simulate name="arb2_bench"/>
+    <dumpVCD value="arb2_bench/arb2_/*"/>
+    <nFaults value="12"/>
+</faisal>

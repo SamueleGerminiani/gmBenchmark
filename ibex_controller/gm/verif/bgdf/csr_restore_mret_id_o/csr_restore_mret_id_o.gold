@@ -1,0 +1,478 @@
+Report file generated at: Aug-04-2021 05:09:50 PM
+
+#############################
+# Detailed Assertion Report #
+#############################
+
+
+a15: (store_err_q == 1) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.0199
+Importance: : 2.30862
+Complexity: : 116
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a14: (store_err_q == 0) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.0199
+Importance: : 2.30862
+Complexity: : 116
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a40: (stall_jump_i == 0) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01881
+Importance: : 2.38866
+Complexity: : 127
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a41: (stall_jump_i == 1) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01881
+Importance: : 2.38866
+Complexity: : 127
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a42: (instr_fetch_err_i == 0) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01757
+Importance: : 2.40742
+Complexity: : 137
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a43: (instr_fetch_err_i == 1) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01757
+Importance: : 2.40742
+Complexity: : 137
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a39: (dret_insn_i == 1) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01664
+Importance: : 2.42964
+Complexity: : 146
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a38: (dret_insn_i == 0) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01664
+Importance: : 2.42964
+Complexity: : 146
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a7: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & debug_req_i == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01285
+Importance: : 1.04063
+Complexity: : 81
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a6: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & debug_req_i == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01285
+Importance: : 1.04063
+Complexity: : 81
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a5: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & exc_req_q == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01223
+Importance: : 0.85606
+Complexity: : 70
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a4: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & exc_req_q == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01223
+Importance: : 0.85606
+Complexity: : 70
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a9: (ebreak_into_debug == 1 & debug_req_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01207
+Importance: : 1.18272
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a8: (ebreak_into_debug == 1 & debug_req_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01207
+Importance: : 1.18272
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a35: (ebreak_into_debug == 1 & exc_req_d == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01071
+Importance: : 1.04916
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a34: (ebreak_into_debug == 1 & exc_req_d == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01071
+Importance: : 1.04916
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a13: (ebreak_into_debug == 1 & stall_lsu_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01064
+Importance: : 1.04305
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a12: (ebreak_into_debug == 1 & stall_lsu_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01064
+Importance: : 1.04305
+Complexity: : 98
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a26: (ebreak_into_debug == 1 & irq_nm_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01048
+Importance: : 1.03742
+Complexity: : 99
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a27: (ebreak_into_debug == 1 & irq_nm_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01048
+Importance: : 1.03742
+Complexity: : 99
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a44: (ebreak_into_debug == 1 & csr_pipe_flush_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.0104
+Importance: : 1.05088
+Complexity: : 101
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a45: (ebreak_into_debug == 1 & csr_pipe_flush_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.0104
+Importance: : 1.05088
+Complexity: : 101
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a20: (ebreak_into_debug == 1 & illegal_insn_d == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.01015
+Importance: : 1.06565
+Complexity: : 105
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a21: (ebreak_into_debug == 1 & illegal_insn_d == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.01015
+Importance: : 1.06565
+Complexity: : 105
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a19: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & illegal_insn_q == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00994
+Importance: : 0.67613
+Complexity: : 68
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a18: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & illegal_insn_q == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00994
+Importance: : 0.67613
+Complexity: : 68
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a22: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & fetch_enable_i == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00988
+Importance: : 0.67165
+Complexity: : 68
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a23: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & fetch_enable_i == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00988
+Importance: : 0.67165
+Complexity: : 68
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a46: (ebreak_into_debug == 1 & ecall_insn_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00983
+Importance: : 1.06182
+Complexity: : 108
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a47: (ebreak_into_debug == 1 & ecall_insn_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00983
+Importance: : 1.06182
+Complexity: : 108
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a24: (ebreak_into_debug == 1 & illegal_insn_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00965
+Importance: : 1.07065
+Complexity: : 111
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a25: (ebreak_into_debug == 1 & illegal_insn_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00965
+Importance: : 1.07065
+Complexity: : 111
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a28: (debug_ebreakm_i == 0) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00959
+Importance: : 1.16987
+Complexity: : 122
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a29: (debug_ebreakm_i == 1) ##1 (ebreak_into_debug == 1) ##2 (mret_insn == 1 & exc_req_lsu == 0) ##3 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00959
+Importance: : 1.16987
+Complexity: : 122
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a48: (ebreak_into_debug == 1 & wfi_insn_i == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00907
+Importance: : 1.08875
+Complexity: : 120
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a49: (ebreak_into_debug == 1 & wfi_insn_i == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00907
+Importance: : 1.08875
+Complexity: : 120
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a3: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.009
+Importance: : 0.57599
+Complexity: : 64
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a31: (ebreak_into_debug == 1 & priv_mode_i[0] == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00776
+Importance: : 0.72133
+Complexity: : 93
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a30: (ebreak_into_debug == 1 & priv_mode_i[0] == 0) ##1 (mret_insn == 1 & exc_req_lsu == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00776
+Importance: : 0.72133
+Complexity: : 93
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a37: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & illegal_umode == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00765
+Importance: : 0.62755
+Complexity: : 82
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a36: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & illegal_umode == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00765
+Importance: : 0.62755
+Complexity: : 82
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a11: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & wfi_insn == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00722
+Importance: : 0.63522
+Complexity: : 88
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a10: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & wfi_insn == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00722
+Importance: : 0.63522
+Complexity: : 88
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a17: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & csr_mstatus_tw_i == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00719
+Importance: : 0.63255
+Complexity: : 88
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a16: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & csr_mstatus_tw_i == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00719
+Importance: : 0.63255
+Complexity: : 88
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a33: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & wfi_insn_i == 1) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00704
+Importance: : 0.64021
+Complexity: : 91
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a32: (ebreak_into_debug == 1) ##1 (mret_insn == 1 & exc_req_lsu == 0 & wfi_insn_i == 0) ##2 (mret_insn == 1) |-> (csr_restore_mret_id_o == 1)
+IRank: : 0.00704
+Importance: : 0.64021
+Complexity: : 91
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a0: (ebreak_into_debug == 0) |=> ##1 (csr_restore_mret_id_o == 0)
+IRank: : 0.00638
+Importance: : 0.14034
+Complexity: : 22
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a2: (ebreak_into_debug == 1) ##1 (mret_insn == 1) ##2 (mret_insn == 0) |-> (csr_restore_mret_id_o == 0)
+IRank: : 0.00453
+Importance: : 0.21284
+Complexity: : 47
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+a1: (ebreak_into_debug == 1) ##1 (mret_insn == 0) |=> (csr_restore_mret_id_o == 0)
+IRank: : 0.00434
+Importance: : 0.19957
+Complexity: : 46
+Triggered: : Unknown
+Vacuous: : Unknown
+Verification status: : Unknown
+
+
+################################
+# Tabularized Assertion Report #
+################################
+
+
+Assertion Index |  IRank  | Importance | Complexity | Triggered | Vacuous | Verif Status
+--------------- | ------- | ---------- | ---------- | --------- | ------- | ------------
+      a15       | 0.0199  |  2.30862   |    116     |  Unknown  | Unknown |   Unknown   
+      a14       | 0.0199  |  2.30862   |    116     |  Unknown  | Unknown |   Unknown   
+      a40       | 0.01881 |  2.38866   |    127     |  Unknown  | Unknown |   Unknown   
+      a41       | 0.01881 |  2.38866   |    127     |  Unknown  | Unknown |   Unknown   
+      a42       | 0.01757 |  2.40742   |    137     |  Unknown  | Unknown |   Unknown   
+      a43       | 0.01757 |  2.40742   |    137     |  Unknown  | Unknown |   Unknown   
+      a39       | 0.01664 |  2.42964   |    146     |  Unknown  | Unknown |   Unknown   
+      a38       | 0.01664 |  2.42964   |    146     |  Unknown  | Unknown |   Unknown   
+      a7        | 0.01285 |  1.04063   |     81     |  Unknown  | Unknown |   Unknown   
+      a6        | 0.01285 |  1.04063   |     81     |  Unknown  | Unknown |   Unknown   
+      a5        | 0.01223 |  0.85606   |     70     |  Unknown  | Unknown |   Unknown   
+      a4        | 0.01223 |  0.85606   |     70     |  Unknown  | Unknown |   Unknown   
+      a9        | 0.01207 |  1.18272   |     98     |  Unknown  | Unknown |   Unknown   
+      a8        | 0.01207 |  1.18272   |     98     |  Unknown  | Unknown |   Unknown   
+      a35       | 0.01071 |  1.04916   |     98     |  Unknown  | Unknown |   Unknown   
+      a34       | 0.01071 |  1.04916   |     98     |  Unknown  | Unknown |   Unknown   
+      a12       | 0.01064 |  1.04305   |     98     |  Unknown  | Unknown |   Unknown   
+      a13       | 0.01064 |  1.04305   |     98     |  Unknown  | Unknown |   Unknown   
+      a26       | 0.01048 |  1.03742   |     99     |  Unknown  | Unknown |   Unknown   
+      a27       | 0.01048 |  1.03742   |     99     |  Unknown  | Unknown |   Unknown   
+      a44       | 0.0104  |  1.05088   |    101     |  Unknown  | Unknown |   Unknown   
+      a45       | 0.0104  |  1.05088   |    101     |  Unknown  | Unknown |   Unknown   
+      a20       | 0.01015 |  1.06565   |    105     |  Unknown  | Unknown |   Unknown   
+      a21       | 0.01015 |  1.06565   |    105     |  Unknown  | Unknown |   Unknown   
+      a19       | 0.00994 |  0.67613   |     68     |  Unknown  | Unknown |   Unknown   
+      a18       | 0.00994 |  0.67613   |     68     |  Unknown  | Unknown |   Unknown   
+      a22       | 0.00988 |  0.67165   |     68     |  Unknown  | Unknown |   Unknown   
+      a23       | 0.00988 |  0.67165   |     68     |  Unknown  | Unknown |   Unknown   
+      a46       | 0.00983 |  1.06182   |    108     |  Unknown  | Unknown |   Unknown   
+      a47       | 0.00983 |  1.06182   |    108     |  Unknown  | Unknown |   Unknown   
+      a24       | 0.00965 |  1.07065   |    111     |  Unknown  | Unknown |   Unknown   
+      a25       | 0.00965 |  1.07065   |    111     |  Unknown  | Unknown |   Unknown   
+      a28       | 0.00959 |  1.16987   |    122     |  Unknown  | Unknown |   Unknown   
+      a29       | 0.00959 |  1.16987   |    122     |  Unknown  | Unknown |   Unknown   
+      a48       | 0.00907 |  1.08875   |    120     |  Unknown  | Unknown |   Unknown   
+      a49       | 0.00907 |  1.08875   |    120     |  Unknown  | Unknown |   Unknown   
+      a3        |  0.009  |  0.57599   |     64     |  Unknown  | Unknown |   Unknown   
+      a31       | 0.00776 |  0.72133   |     93     |  Unknown  | Unknown |   Unknown   
+      a30       | 0.00776 |  0.72133   |     93     |  Unknown  | Unknown |   Unknown   
+      a37       | 0.00765 |  0.62755   |     82     |  Unknown  | Unknown |   Unknown   
+      a36       | 0.00765 |  0.62755   |     82     |  Unknown  | Unknown |   Unknown   
+      a11       | 0.00722 |  0.63522   |     88     |  Unknown  | Unknown |   Unknown   
+      a10       | 0.00722 |  0.63522   |     88     |  Unknown  | Unknown |   Unknown   
+      a17       | 0.00719 |  0.63255   |     88     |  Unknown  | Unknown |   Unknown   
+      a16       | 0.00719 |  0.63255   |     88     |  Unknown  | Unknown |   Unknown   
+      a33       | 0.00704 |  0.64021   |     91     |  Unknown  | Unknown |   Unknown   
+      a32       | 0.00704 |  0.64021   |     91     |  Unknown  | Unknown |   Unknown   
+      a0        | 0.00638 |  0.14034   |     22     |  Unknown  | Unknown |   Unknown   
+      a2        | 0.00453 |  0.21284   |     47     |  Unknown  | Unknown |   Unknown   
+      a1        | 0.00434 |  0.19957   |     46     |  Unknown  | Unknown |   Unknown   
+
+
+###############################
+# Summarized Assertion Report #
+###############################
+
+
+Total number of mined assertions: 50
+Total number of passed assertions: 0
+Total number of failed assertions: 0
+Total number of vacuous / unexplored assertions: 50
+Hit rate: 0.0
+Miss rate: 1.0

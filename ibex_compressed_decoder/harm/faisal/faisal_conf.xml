@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<faisal>
+    <vlog arguments="-sv src/ibex_compressed_decoder_bench.v src/ibex_compressed_decoder.v src/ibex_pkg.v" />
+    <simulate name="ibex_compressed_decoder_bench"/>
+    <dumpVCD value="ibex_compressed_decoder_bench/ibex_compressed_decoder_/*"/>
+    <nFaults value="848"/>
+</faisal>

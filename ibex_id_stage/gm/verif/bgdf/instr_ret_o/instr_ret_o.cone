@@ -1,0 +1,405 @@
+data_req_dec
+Importance: 0.007
+Complexity: 4
+Rank: 0.00175
+
+decoder_i.illegal_c_insn_i
+Importance: 0.01461
+Complexity: 6
+Rank: 0.00244
+
+[2]instr_fetch_err_i
+Importance: 0.45186
+Complexity: 10
+Rank: 0.04519
+
+[3]lsu_valid_i
+Importance: 0.7976
+Complexity: 17
+Rank: 0.04692
+
+[2]ex_valid_i
+Importance: 0.11409
+Complexity: 12
+Rank: 0.00951
+
+[1]decoder_i.instr_rdata_i
+Importance: 0.04566
+Complexity: 16
+Rank: 0.00285
+
+[2]instr_new_i
+Importance: 0.45186
+Complexity: 10
+Rank: 0.04519
+
+[2]id_wb_fsm_cs
+Importance: 0.79208
+Complexity: 11
+Rank: 0.07201
+
+[1]id_wb_fsm_ns
+Importance: 0.01495
+Complexity: 3
+Rank: 0.00498
+
+[2]data_req_dec
+Importance: 0.22753
+Complexity: 12
+Rank: 0.01896
+
+[2]decoder_i.csr_illegal
+Importance: 0.23441
+Complexity: 15
+Rank: 0.01563
+
+[1]branch_decision_i
+Importance: 0.01644
+Complexity: 7
+Rank: 0.00235
+
+lsu_valid_i
+Importance: 0.00382
+Complexity: 4
+Rank: 0.00096
+
+decoder_i.data_req_o
+Importance: 0.00871
+Complexity: 4
+Rank: 0.00218
+
+[2]decoder_i.instr
+Importance: 0.23908
+Complexity: 19
+Rank: 0.01258
+
+decoder_i.instr
+Importance: 0.01855
+Complexity: 11
+Rank: 0.00169
+
+branch_decision_i
+Importance: 0.00382
+Complexity: 2
+Rank: 0.00191
+
+id_wb_fsm_cs
+Importance: 0.01092
+Complexity: 1
+Rank: 0.01092
+
+[2]rst_ni
+Importance: 0.21863
+Complexity: 7
+Rank: 0.03123
+
+[3]IDLE
+Importance: 1.59371
+Complexity: 19
+Rank: 0.08388
+
+[3]branch_decision_i
+Importance: 0.7976
+Complexity: 17
+Rank: 0.04692
+
+decoder_i.instr_rdata_i
+Importance: 0.02042
+Complexity: 13
+Rank: 0.00157
+
+[3]id_wb_fsm_ns
+Importance: 0.79611
+Complexity: 13
+Rank: 0.06124
+
+[3]decoder_i.instr
+Importance: 1.60612
+Complexity: 24
+Rank: 0.06692
+
+[1]IDLE
+Importance: 0.03139
+Complexity: 9
+Rank: 0.00349
+
+[1]id_wb_fsm_cs
+Importance: 0.10857
+Complexity: 6
+Rank: 0.01809
+
+instr_fetch_err_i
+Importance: 0.00615
+Complexity: 2
+Rank: 0.00307
+
+[1]decoder_i.opcode
+Importance: 0.04136
+Complexity: 11
+Rank: 0.00376
+
+[3]illegal_c_insn_i
+Importance: 1.60367
+Complexity: 19
+Rank: 0.0844
+
+decoder_i.opcode
+Importance: 0.01612
+Complexity: 8
+Rank: 0.00202
+
+[2]instr_rdata_i
+Importance: 0.24245
+Complexity: 21
+Rank: 0.01155
+
+[2]decoder_i.illegal_c_insn_i
+Importance: 0.23514
+Complexity: 14
+Rank: 0.0168
+
+[1]decoder_i.data_req_o
+Importance: 0.03395
+Complexity: 7
+Rank: 0.00485
+
+[3]decoder_i.sv2v_cast_DB892
+Importance: 1.60518
+Complexity: 24
+Rank: 0.06688
+
+[2]decoder_i.opcode
+Importance: 0.23665
+Complexity: 16
+Rank: 0.01479
+
+decoder_i.csr_illegal
+Importance: 0.01388
+Complexity: 7
+Rank: 0.00198
+
+[1]instr_rdata_i
+Importance: 0.04716
+Complexity: 16
+Rank: 0.00295
+
+[2]decoder_i.sv2v_cast_DB892
+Importance: 0.23815
+Complexity: 19
+Rank: 0.01253
+
+[1]instr_new_i
+Importance: 0.06128
+Complexity: 5
+Rank: 0.01226
+
+[1]rst_ni
+Importance: 0.02334
+Complexity: 2
+Rank: 0.01167
+
+[1]illegal_c_insn_i
+Importance: 0.04135
+Complexity: 9
+Rank: 0.00459
+
+[2]branch_decision_i
+Importance: 0.11409
+Complexity: 12
+Rank: 0.00951
+
+decoder_i.sv2v_cast_DB892
+Importance: 0.01762
+Complexity: 11
+Rank: 0.0016
+
+[1]decoder_i.sv2v_cast_DB892
+Importance: 0.04286
+Complexity: 14
+Rank: 0.00306
+
+[3]instr_new_i
+Importance: 3.18593
+Complexity: 15
+Rank: 0.2124
+
+[3]decoder_i.data_req_o
+Importance: 1.59627
+Complexity: 17
+Rank: 0.0939
+
+[1]lsu_valid_i
+Importance: 0.01644
+Complexity: 7
+Rank: 0.00235
+
+[2]lsu_valid_i
+Importance: 0.11409
+Complexity: 12
+Rank: 0.00951
+
+[3]data_req_dec
+Importance: 1.59457
+Complexity: 17
+Rank: 0.0938
+
+[3]WAIT_MULTICYCLE
+Importance: 3.18593
+Complexity: 23
+Rank: 0.13852
+
+instr_new_i
+Importance: 0.00615
+Complexity: 2
+Rank: 0.00307
+
+[1]decoder_i.instr
+Importance: 0.04379
+Complexity: 14
+Rank: 0.00313
+
+[3]decoder_i.instr_rdata_i
+Importance: 1.60799
+Complexity: 26
+Rank: 0.06185
+
+[1]data_req_dec
+Importance: 0.03224
+Complexity: 7
+Rank: 0.00461
+
+[3]decoder_i.illegal_c_insn_i
+Importance: 1.60218
+Complexity: 19
+Rank: 0.08433
+
+[2]WAIT_MULTICYCLE
+Importance: 0.45186
+Complexity: 18
+Rank: 0.0251
+
+[1]decoder_i.illegal_c_insn_i
+Importance: 0.03985
+Complexity: 9
+Rank: 0.00443
+
+[1]decoder_i.illegal_insn
+Importance: 0.03761
+Complexity: 8
+Rank: 0.0047
+
+instr_rdata_i
+Importance: 0.02192
+Complexity: 13
+Rank: 0.00169
+
+illegal_c_insn_i
+Importance: 0.01611
+Complexity: 6
+Rank: 0.00268
+
+[3]ex_valid_i
+Importance: 0.7976
+Complexity: 17
+Rank: 0.04692
+
+[3]decoder_i.illegal_insn
+Importance: 1.59993
+Complexity: 18
+Rank: 0.08889
+
+[3]decoder_i.csr_illegal
+Importance: 1.60144
+Complexity: 20
+Rank: 0.08007
+
+[2]decoder_i.instr_rdata_i
+Importance: 0.24095
+Complexity: 21
+Rank: 0.01147
+
+[2]decoder_i.data_req_o
+Importance: 0.22924
+Complexity: 12
+Rank: 0.0191
+
+[1]ex_valid_i
+Importance: 0.01644
+Complexity: 7
+Rank: 0.00235
+
+[2]illegal_c_insn_i
+Importance: 0.23664
+Complexity: 14
+Rank: 0.0169
+
+[1]decoder_i.csr_illegal
+Importance: 0.03912
+Complexity: 10
+Rank: 0.00391
+
+instr_ret_o
+Importance: 0.00233
+Complexity: 0
+Rank: 0.0
+
+[1]WAIT_MULTICYCLE
+Importance: 0.06128
+Complexity: 13
+Rank: 0.00471
+
+[3]instr_fetch_err_i
+Importance: 3.18593
+Complexity: 15
+Rank: 0.2124
+
+[3]id_wb_fsm_cs
+Importance: 5.5767
+Complexity: 16
+Rank: 0.34854
+
+[2]id_wb_fsm_ns
+Importance: 0.11259
+Complexity: 8
+Rank: 0.01407
+
+[3]instr_rdata_i
+Importance: 1.60948
+Complexity: 26
+Rank: 0.0619
+
+[1]instr_fetch_err_i
+Importance: 0.06128
+Complexity: 5
+Rank: 0.01226
+
+[3]decoder_i.opcode
+Importance: 1.60369
+Complexity: 21
+Rank: 0.07637
+
+[2]IDLE
+Importance: 0.22668
+Complexity: 14
+Rank: 0.01619
+
+[3]rst_ni
+Importance: 1.58567
+Complexity: 12
+Rank: 0.13214
+
+[2]decoder_i.illegal_insn
+Importance: 0.2329
+Complexity: 13
+Rank: 0.01792
+
+ex_valid_i
+Importance: 0.00382
+Complexity: 4
+Rank: 0.00096
+
+decoder_i.illegal_insn
+Importance: 0.01237
+Complexity: 5
+Rank: 0.00247
+

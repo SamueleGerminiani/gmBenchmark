@@ -1,0 +1,1657 @@
+strict digraph "" {
+	"[3]lsu_valid_i"	 [complexity=29,
+		importance=0.28499418815,
+		rank=0.00982738579828];
+	"[3]stall_branch"	 [complexity=25,
+		importance=0.283723490406,
+		rank=0.0113489396162];
+	"[3]lsu_valid_i" -> "[3]stall_branch";
+	"[3]stall_jump"	 [complexity=25,
+		importance=0.28349822546,
+		rank=0.0113399290184];
+	"[3]lsu_valid_i" -> "[3]stall_jump";
+	"[3]stall_multdiv"	 [complexity=25,
+		importance=0.283288090828,
+		rank=0.0113315236331];
+	"[3]lsu_valid_i" -> "[3]stall_multdiv";
+	"[3]stall_lsu"	 [complexity=25,
+		importance=0.282706628192,
+		rank=0.0113082651277];
+	"[3]lsu_valid_i" -> "[3]stall_lsu";
+	"[3]id_wb_fsm_ns"	 [complexity=24,
+		importance=0.455633873245,
+		rank=0.0189847447185];
+	"[3]lsu_valid_i" -> "[3]id_wb_fsm_ns";
+	"[2]ex_valid_i"	 [complexity=25,
+		importance=0.225329597001,
+		rank=0.00901318388002];
+	"[2]stall_lsu"	 [complexity=21,
+		importance=0.223042037042,
+		rank=0.010621049383];
+	"[2]ex_valid_i" -> "[2]stall_lsu";
+	"[2]stall_jump"	 [complexity=21,
+		importance=0.22383363431,
+		rank=0.010658744491];
+	"[2]ex_valid_i" -> "[2]stall_jump";
+	"[2]stall_multdiv"	 [complexity=21,
+		importance=0.223623499678,
+		rank=0.0106487380799];
+	"[2]ex_valid_i" -> "[2]stall_multdiv";
+	"[2]stall_branch"	 [complexity=21,
+		importance=0.224058899256,
+		rank=0.0106694713931];
+	"[2]ex_valid_i" -> "[2]stall_branch";
+	"[2]controller_i.instr_valid_i"	 [complexity=12,
+		importance=0.01853630154,
+		rank=0.001544691795];
+	"[2]controller_i.ecall_insn"	 [complexity=28,
+		importance=0.223270183258,
+		rank=0.00797393511636];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.ecall_insn";
+	"[2]controller_i.mret_insn"	 [complexity=9,
+		importance=0.0166663397585,
+		rank=0.00185181552872];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.mret_insn";
+	"[2]controller_i.instr_fetch_err"	 [complexity=28,
+		importance=0.222727552594,
+		rank=0.0079545554498];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.instr_fetch_err";
+	"[2]controller_i.wfi_insn"	 [complexity=40,
+		importance=0.233174909921,
+		rank=0.00582937274802];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.wfi_insn";
+	"[2]controller_i.ebrk_insn"	 [complexity=28,
+		importance=0.223270183258,
+		rank=0.00797393511636];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.ebrk_insn";
+	"[2]controller_i.dret_insn"	 [complexity=9,
+		importance=0.0166663397585,
+		rank=0.00185181552872];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.dret_insn";
+	"[2]controller_i.ctrl_fsm_ns"	 [complexity=7,
+		importance=0.0626653437593,
+		rank=0.00895219196562];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.halt_if"	 [complexity=11,
+		importance=0.07048327726,
+		rank=0.00640757066];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.halt_if";
+	"[2]controller_i.csr_pipe_flush"	 [complexity=21,
+		importance=0.220692396206,
+		rank=0.0105091617241];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.csr_pipe_flush";
+	"[2]controller_i.enter_debug_mode"	 [complexity=16,
+		importance=0.283669426381,
+		rank=0.0177293391488];
+	"[2]controller_i.instr_valid_i" -> "[2]controller_i.enter_debug_mode";
+	"[3]fetch_enable_i"	 [complexity=12,
+		importance=0.0862934643721,
+		rank=0.00719112203101];
+	"[3]controller_i.fetch_enable_i"	 [complexity=12,
+		importance=0.0847975016817,
+		rank=0.00706645847347];
+	"[3]fetch_enable_i" -> "[3]controller_i.fetch_enable_i";
+	"[2]csr_pipe_flush"	 [complexity=24,
+		importance=0.231950701573,
+		rank=0.00966461256554];
+	"[2]controller_i.csr_pipe_flush_i"	 [complexity=24,
+		importance=0.225442771341,
+		rank=0.00939344880587];
+	"[2]csr_pipe_flush" -> "[2]controller_i.csr_pipe_flush_i";
+	"[3]decoder_i.CSR_DCSR"	 [complexity=40,
+		importance=0.30313581371,
+		rank=0.00757839534274];
+	"[3]decoder_i.csr_pipe_flush_o"	 [complexity=28,
+		importance=0.301639851019,
+		rank=0.0107728518221];
+	"[3]decoder_i.CSR_DCSR" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[2]controller_i.dret_insn_i"	 [complexity=12,
+		importance=0.0192869479903,
+		rank=0.00160724566586];
+	"[2]controller_i.dret_insn_i" -> "[2]controller_i.dret_insn";
+	"[2]controller_i.stall_jump_i"	 [complexity=21,
+		importance=0.221221885289,
+		rank=0.01053437549];
+	"[2]controller_i.stall"	 [complexity=16,
+		importance=0.218420060355,
+		rank=0.0136512537722];
+	"[2]controller_i.stall_jump_i" -> "[2]controller_i.stall";
+	"[2]controller_i.id_in_ready_o"	 [complexity=8,
+		importance=0.0657746488422,
+		rank=0.00822183110528];
+	"[2]controller_i.stall" -> "[2]controller_i.id_in_ready_o";
+	"[2]controller_i.stall" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.stall" -> "[2]controller_i.halt_if";
+	"[3]controller_i.FLUSH"	 [complexity=38,
+		importance=0.287747497963,
+		rank=0.00757230257796];
+	"[3]controller_i.exc_req_d"	 [complexity=25,
+		importance=0.280066170659,
+		rank=0.0112026468264];
+	"[3]controller_i.FLUSH" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.illegal_insn_d"	 [complexity=32,
+		importance=0.286251535272,
+		rank=0.00894536047725];
+	"[3]controller_i.FLUSH" -> "[3]controller_i.illegal_insn_d";
+	"[3]controller_i.ctrl_fsm_ns"	 [complexity=11,
+		importance=0.0825535408092,
+		rank=0.00750486734629];
+	"[3]controller_i.FLUSH" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.irq_nm_i"	 [complexity=22,
+		importance=0.217041189799,
+		rank=0.00986550862725];
+	"[2]controller_i.handle_irq"	 [complexity=16,
+		importance=0.214797228927,
+		rank=0.0134248268079];
+	"[2]controller_i.irq_nm_i" -> "[2]controller_i.handle_irq";
+	"[2]controller_i.irq_nm_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]instr_rdata_i"	 [complexity=18,
+		importance=0.0310878988592,
+		rank=0.00172710549218];
+	"[2]decoder_i.instr_rdata_i"	 [complexity=18,
+		importance=0.0295919361688,
+		rank=0.00164399645382];
+	"[2]instr_rdata_i" -> "[2]decoder_i.instr_rdata_i";
+	"[2]debug_req_i"	 [complexity=10,
+		importance=0.0313353955824,
+		rank=0.00313353955824];
+	"[2]controller_i.debug_req_i"	 [complexity=10,
+		importance=0.029839432892,
+		rank=0.0029839432892];
+	"[2]debug_req_i" -> "[2]controller_i.debug_req_i";
+	"[3]decoder_i.alu_op_a_mux_sel_o"	 [complexity=54,
+		importance=0.308370629198,
+		rank=0.00571056720736];
+	"[3]decoder_i.illegal_reg_rv32e"	 [complexity=45,
+		importance=0.304268171394,
+		rank=0.00676151491986];
+	"[3]decoder_i.alu_op_a_mux_sel_o" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[1]rst_ni"	 [complexity=3,
+		importance=0.0162536812779,
+		rank=0.00541789375929];
+	"[1]controller_i.rst_ni"	 [complexity=3,
+		importance=0.0147577185874,
+		rank=0.00491923952914];
+	"[1]rst_ni" -> "[1]controller_i.rst_ni";
+	"[2]controller_i.csr_mstatus_mie_i"	 [complexity=22,
+		importance=0.217041189799,
+		rank=0.00986550862725];
+	"[2]controller_i.csr_mstatus_mie_i" -> "[2]controller_i.handle_irq";
+	"[3]data_req_dec"	 [complexity=29,
+		importance=0.569346304796,
+		rank=0.0196326311998];
+	"[3]data_req_dec" -> "[3]stall_branch";
+	"[3]data_req_dec" -> "[3]stall_jump";
+	"[3]data_req_dec" -> "[3]stall_multdiv";
+	"[3]data_req_dec" -> "[3]stall_lsu";
+	"[3]data_req_dec" -> "[3]id_wb_fsm_ns";
+	"[3]controller_i.ebrk_insn_i"	 [complexity=35,
+		importance=0.285555382639,
+		rank=0.00815872521827];
+	"[3]controller_i.ebrk_insn"	 [complexity=32,
+		importance=0.282934774408,
+		rank=0.00884171170024];
+	"[3]controller_i.ebrk_insn_i" -> "[3]controller_i.ebrk_insn";
+	"[3]controller_i.csr_mstatus_tw_i"	 [complexity=44,
+		importance=0.292214858194,
+		rank=0.00664124677714];
+	"[3]controller_i.illegal_umode"	 [complexity=38,
+		importance=0.289970897322,
+		rank=0.00763081308741];
+	"[3]controller_i.csr_mstatus_tw_i" -> "[3]controller_i.illegal_umode";
+	"[2]fetch_enable_i"	 [complexity=8,
+		importance=0.0664052673222,
+		rank=0.00830065841528];
+	"[2]controller_i.fetch_enable_i"	 [complexity=8,
+		importance=0.0649093046318,
+		rank=0.00811366307897];
+	"[2]fetch_enable_i" -> "[2]controller_i.fetch_enable_i";
+	"[2]csr_mstatus_mie_i"	 [complexity=22,
+		importance=0.21853715249,
+		rank=0.00993350693136];
+	"[2]csr_mstatus_mie_i" -> "[2]controller_i.csr_mstatus_mie_i";
+	"[3]illegal_insn_o"	 [complexity=38,
+		importance=0.293335737806,
+		rank=0.00771936152122];
+	"[3]controller_i.illegal_insn_i"	 [complexity=38,
+		importance=0.289609622181,
+		rank=0.00762130584686];
+	"[3]illegal_insn_o" -> "[3]controller_i.illegal_insn_i";
+	"[3]controller_i.dret_insn_i"	 [complexity=16,
+		importance=0.0242589972527,
+		rank=0.0015161873283];
+	"[3]controller_i.dret_insn"	 [complexity=13,
+		importance=0.021638389021,
+		rank=0.00166449146315];
+	"[3]controller_i.dret_insn_i" -> "[3]controller_i.dret_insn";
+	"[2]illegal_csr_insn_i"	 [complexity=38,
+		importance=0.235167109347,
+		rank=0.00618860814072];
+	"[2]illegal_insn_o"	 [complexity=34,
+		importance=0.233671146657,
+		rank=0.00687268078403];
+	"[2]illegal_csr_insn_i" -> "[2]illegal_insn_o";
+	"[3]ebrk_insn"	 [complexity=35,
+		importance=0.287804756894,
+		rank=0.00822299305411];
+	"[3]ebrk_insn" -> "[3]controller_i.ebrk_insn_i";
+	"[3]decoder_i.CSR_DSCRATCH0"	 [complexity=40,
+		importance=0.30313581371,
+		rank=0.00757839534274];
+	"[3]decoder_i.CSR_DSCRATCH0" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.CSR_DSCRATCH1"	 [complexity=40,
+		importance=0.30313581371,
+		rank=0.00757839534274];
+	"[3]decoder_i.CSR_DSCRATCH1" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]dret_insn_dec"	 [complexity=16,
+		importance=0.0265083715071,
+		rank=0.0016567732192];
+	"[3]dret_insn_dec" -> "[3]controller_i.dret_insn_i";
+	"[1]decoder_i.dret_insn_o"	 [complexity=8,
+		importance=0.018071061631,
+		rank=0.00225888270388];
+	"[1]dret_insn_dec"	 [complexity=8,
+		importance=0.0165642729822,
+		rank=0.00207053412277];
+	"[1]decoder_i.dret_insn_o" -> "[1]dret_insn_dec";
+	"[2]controller_i.handle_irq" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.handle_irq" -> "[2]controller_i.halt_if";
+	"[3]controller_i.wfi_insn"	 [complexity=44,
+		importance=0.292839501071,
+		rank=0.00665544320615];
+	"[3]controller_i.special_req"	 [complexity=18,
+		importance=0.276422984901,
+		rank=0.0153568324945];
+	"[3]controller_i.wfi_insn" -> "[3]controller_i.special_req";
+	"[3]controller_i.wfi_insn" -> "[3]controller_i.illegal_umode";
+	"[3]controller_i.wfi_insn" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.BOOT_SET"	 [complexity=9,
+		importance=0.0641613064498,
+		rank=0.00712903404997];
+	"[2]controller_i.BOOT_SET" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]instr_valid_i"	 [complexity=16,
+		importance=0.0250043134929,
+		rank=0.0015627695933];
+	"[3]instr_valid_i" -> "[3]illegal_insn_o";
+	"[3]controller_i.instr_valid_i"	 [complexity=16,
+		importance=0.0235083508024,
+		rank=0.00146927192515];
+	"[3]instr_valid_i" -> "[3]controller_i.instr_valid_i";
+	"[3]controller_i.IRQ_TAKEN"	 [complexity=17,
+		importance=0.249156585118,
+		rank=0.0146562697128];
+	"[3]controller_i.IRQ_TAKEN" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]decoder_i.regfile_waddr_o"	 [complexity=54,
+		importance=0.305768106135,
+		rank=0.00566237233584];
+	"[3]decoder_i.regfile_waddr_o" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[3]branch_decision_i"	 [complexity=27,
+		importance=0.285219453096,
+		rank=0.010563683448];
+	"[3]branch_decision_i" -> "[3]stall_branch";
+	"[3]branch_decision_i" -> "[3]id_wb_fsm_ns";
+	"[2]controller_i.exc_req_q"	 [complexity=11,
+		importance=0.0163176444443,
+		rank=0.00148342222221];
+	"[2]controller_i.debug_mode_d"	 [complexity=8,
+		importance=0.0137977360098,
+		rank=0.00172471700122];
+	"[2]controller_i.exc_req_q" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.exc_req_q" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.DBG_TAKEN_ID"	 [complexity=13,
+		importance=0.0840495034996,
+		rank=0.00646534642305];
+	"[3]controller_i.DBG_TAKEN_ID" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.DBG_TAKEN_IF"	 [complexity=17,
+		importance=0.249156585118,
+		rank=0.0146562697128];
+	"[3]controller_i.DBG_TAKEN_IF" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.exc_req_d"	 [complexity=21,
+		importance=0.220401579509,
+		rank=0.01049531331];
+	"[2]controller_i.special_req"	 [complexity=14,
+		importance=0.216758393752,
+		rank=0.0154827424108];
+	"[2]controller_i.exc_req_d" -> "[2]controller_i.special_req";
+	"[1]controller_i.exc_req_q"	 [complexity=7,
+		importance=0.0113455951819,
+		rank=0.0016207993117];
+	"[2]controller_i.exc_req_d" -> "[1]controller_i.exc_req_q";
+	"[3]decoder_i.wfi_insn_o"	 [complexity=47,
+		importance=0.299216272206,
+		rank=0.00636630366395];
+	"[3]wfi_insn_dec"	 [complexity=47,
+		importance=0.297709483557,
+		rank=0.00633424433099];
+	"[3]decoder_i.wfi_insn_o" -> "[3]wfi_insn_dec";
+	"[3]controller_i.csr_pipe_flush"	 [complexity=25,
+		importance=0.280356987356,
+		rank=0.0112142794942];
+	"[3]controller_i.csr_pipe_flush" -> "[3]controller_i.special_req";
+	"[3]controller_i.csr_pipe_flush" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]div_en_dec"	 [complexity=26,
+		importance=0.228667003893,
+		rank=0.00879488476512];
+	"[2]multdiv_en_dec"	 [complexity=23,
+		importance=0.22630196059,
+		rank=0.00983921567783];
+	"[2]div_en_dec" -> "[2]multdiv_en_dec";
+	"[3]rst_ni"	 [complexity=11,
+		importance=0.0361418783277,
+		rank=0.00328562530252];
+	"[2]id_wb_fsm_cs"	 [complexity=22,
+		importance=0.451611021496,
+		rank=0.0205277737044];
+	"[3]rst_ni" -> "[2]id_wb_fsm_cs";
+	"[3]controller_i.rst_ni"	 [complexity=11,
+		importance=0.0346459156373,
+		rank=0.0031496286943];
+	"[3]rst_ni" -> "[3]controller_i.rst_ni";
+	"[2]controller_i.ecall_insn" -> "[2]controller_i.exc_req_d";
+	"[2]controller_i.ecall_insn" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.illegal_dret"	 [complexity=34,
+		importance=0.228338030976,
+		rank=0.00671582444048];
+	"[2]controller_i.illegal_insn_d"	 [complexity=28,
+		importance=0.226586944122,
+		rank=0.00809239086152];
+	"[2]controller_i.illegal_dret" -> "[2]controller_i.illegal_insn_d";
+	"[2]controller_i.mret_insn" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.mret_insn" -> "[2]controller_i.special_req";
+	"[2]controller_i.illegal_umode"	 [complexity=34,
+		importance=0.230306306172,
+		rank=0.00677371488742];
+	"[2]controller_i.mret_insn" -> "[2]controller_i.illegal_umode";
+	"[2]controller_i.mret_insn" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.stall_lsu_i"	 [complexity=25,
+		importance=0.280622639885,
+		rank=0.0112249055954];
+	"[3]controller_i.stall"	 [complexity=20,
+		importance=0.278084651504,
+		rank=0.0139042325752];
+	"[3]controller_i.stall_lsu_i" -> "[3]controller_i.stall";
+	"[3]decoder_i.csr_op_o"	 [complexity=36,
+		importance=1.51180350701,
+		rank=0.0419945418613];
+	"[3]decoder_i.csr_op_o" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[1]controller_i.load_err_q"	 [complexity=7,
+		importance=0.0114169067406,
+		rank=0.00163098667722];
+	"[1]controller_i.debug_mode_d"	 [complexity=4,
+		importance=0.00882568674728,
+		rank=0.00220642168682];
+	"[1]controller_i.load_err_q" -> "[1]controller_i.debug_mode_d";
+	"[2]decoder_i.CSR_MSTATUS"	 [complexity=30,
+		importance=0.24347122256,
+		rank=0.00811570741866];
+	"[2]decoder_i.csr_pipe_flush_o"	 [complexity=24,
+		importance=0.24197525987,
+		rank=0.0100823024946];
+	"[2]decoder_i.CSR_MSTATUS" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]decoder_i.sv2v_cast_DB892"	 [complexity=16,
+		importance=0.0267870065076,
+		rank=0.00167418790673];
+	"[2]decoder_i.opcode"	 [complexity=13,
+		importance=0.0252910438172,
+		rank=0.00194546490902];
+	"[2]decoder_i.sv2v_cast_DB892" -> "[2]decoder_i.opcode";
+	"[3]controller_i.exc_req_lsu"	 [complexity=25,
+		importance=0.27894740032,
+		rank=0.0111578960128];
+	"[3]controller_i.exc_req_lsu" -> "[3]controller_i.special_req";
+	"[1]decoder_i.opcode"	 [complexity=9,
+		importance=0.0203189945547,
+		rank=0.00225766606164];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.dret_insn_o";
+	"[1]decoder_i.mret_insn_o"	 [complexity=8,
+		importance=0.018071061631,
+		rank=0.00225888270388];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.mret_insn_o";
+	"[3]decoder_i.OP_A_CURRPC"	 [complexity=66,
+		importance=1.85171973788,
+		rank=0.0280563596648];
+	"[3]decoder_i.OP_A_CURRPC" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[2]decoder_i.regfile_raddr_b_o"	 [complexity=50,
+		importance=0.246103514986,
+		rank=0.00492207029971];
+	"[2]decoder_i.illegal_reg_rv32e"	 [complexity=41,
+		importance=0.244603580244,
+		rank=0.00596594098156];
+	"[2]decoder_i.regfile_raddr_b_o" -> "[2]decoder_i.illegal_reg_rv32e";
+	"controller_i.debug_mode_q"	 [complexity=2,
+		importance=0.00658412806212,
+		rank=0.00329206403106];
+	"[1]controller_i.rst_ni" -> "controller_i.debug_mode_q";
+	"[3]csr_mstatus_tw_i"	 [complexity=44,
+		importance=0.293710820885,
+		rank=0.0066752459292];
+	"[3]csr_mstatus_tw_i" -> "[3]controller_i.csr_mstatus_tw_i";
+	"[1]controller_i.debug_mode_q"	 [complexity=6,
+		importance=0.0115561773246,
+		rank=0.0019260295541];
+	"[2]controller_i.debug_mode_d" -> "[1]controller_i.debug_mode_q";
+	"[3]decoder_i.regfile_raddr_a_o"	 [complexity=54,
+		importance=0.305768106135,
+		rank=0.00566237233584];
+	"[3]decoder_i.regfile_raddr_a_o" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[2]instr_valid_i"	 [complexity=12,
+		importance=0.0200322642304,
+		rank=0.00166935535253];
+	"[2]instr_valid_i" -> "[2]controller_i.instr_valid_i";
+	"[2]instr_valid_i" -> "[2]illegal_insn_o";
+	"[2]controller_i.debug_mode_q"	 [complexity=10,
+		importance=0.0165282265871,
+		rank=0.00165282265871];
+	"[2]controller_i.debug_mode_q" -> "[2]controller_i.handle_irq";
+	"[2]controller_i.debug_mode_q" -> "[2]controller_i.illegal_dret";
+	"[2]controller_i.debug_mode_q" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.debug_mode_q" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.debug_mode_q" -> "[2]controller_i.enter_debug_mode";
+	"[2]dret_insn_dec"	 [complexity=12,
+		importance=0.0215363222447,
+		rank=0.00179469352039];
+	"[2]dret_insn_dec" -> "[2]controller_i.dret_insn_i";
+	"[3]mult_en_dec"	 [complexity=30,
+		importance=0.288331595043,
+		rank=0.00961105316809];
+	"[3]multdiv_en_dec"	 [complexity=27,
+		importance=0.28596655174,
+		rank=0.0105913537681];
+	"[3]mult_en_dec" -> "[3]multdiv_en_dec";
+	"[2]csr_mstatus_tw_i"	 [complexity=40,
+		importance=0.234046229735,
+		rank=0.00585115574338];
+	"[2]controller_i.csr_mstatus_tw_i"	 [complexity=40,
+		importance=0.232550267045,
+		rank=0.00581375667612];
+	"[2]csr_mstatus_tw_i" -> "[2]controller_i.csr_mstatus_tw_i";
+	"[2]controller_i.RESET"	 [complexity=7,
+		importance=0.0474908776899,
+		rank=0.00678441109855];
+	"[1]controller_i.ctrl_fsm_cs"	 [complexity=5,
+		importance=0.0459949149994,
+		rank=0.00919898299989];
+	"[2]controller_i.RESET" -> "[1]controller_i.ctrl_fsm_cs";
+	"[3]decoder_i.illegal_insn_o"	 [complexity=42,
+		importance=0.299237000678,
+		rank=0.00712469049233];
+	"[3]illegal_insn_dec"	 [complexity=42,
+		importance=0.296300305033,
+		rank=0.00705476916745];
+	"[3]decoder_i.illegal_insn_o" -> "[3]illegal_insn_dec";
+	"[3]controller_i.debug_single_step_i"	 [complexity=14,
+		importance=0.0397835314169,
+		rank=0.00284168081549];
+	"[3]controller_i.enter_debug_mode"	 [complexity=20,
+		importance=0.363222214581,
+		rank=0.018161110729];
+	"[3]controller_i.debug_single_step_i" -> "[3]controller_i.enter_debug_mode";
+	"[3]controller_i.debug_mode_d"	 [complexity=12,
+		importance=0.0187697852722,
+		rank=0.00156414877268];
+	"[3]controller_i.debug_single_step_i" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.debug_single_step_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.OP_B_IMM"	 [complexity=80,
+		importance=9.67222561314,
+		rank=0.120902820164];
+	"[2]decoder_i.alu_op_b_mux_sel_o"	 [complexity=50,
+		importance=0.247967426935,
+		rank=0.00495934853869];
+	"[2]decoder_i.OP_B_IMM" -> "[2]decoder_i.alu_op_b_mux_sel_o";
+	"[2]decoder_i.CSR_DPC"	 [complexity=36,
+		importance=0.24347122256,
+		rank=0.00676308951555];
+	"[2]decoder_i.CSR_DPC" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.instr_rdata_i"	 [complexity=22,
+		importance=0.0345639854312,
+		rank=0.00157109024687];
+	"[3]decoder_i.instr"	 [complexity=20,
+		importance=0.0326940236498,
+		rank=0.00163470118249];
+	"[3]decoder_i.instr_rdata_i" -> "[3]decoder_i.instr";
+	"[3]controller_i.irq_nm_i"	 [complexity=26,
+		importance=0.276705780949,
+		rank=0.0106425300365];
+	"[3]controller_i.nmi_mode_d"	 [complexity=24,
+		importance=0.219951344393,
+		rank=0.0091646393497];
+	"[3]controller_i.irq_nm_i" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.handle_irq"	 [complexity=20,
+		importance=0.274461820077,
+		rank=0.0137230910038];
+	"[3]controller_i.irq_nm_i" -> "[3]controller_i.handle_irq";
+	"[3]controller_i.irq_nm_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.stall_branch_i"	 [complexity=25,
+		importance=0.280961557058,
+		rank=0.0112384622823];
+	"[3]controller_i.stall_branch_i" -> "[3]controller_i.stall";
+	"[1]controller_i.debug_single_step_i"	 [complexity=6,
+		importance=0.019895334367,
+		rank=0.00331588906117];
+	"[1]controller_i.debug_single_step_i" -> "[1]controller_i.debug_mode_d";
+	"[3]decoder_i.mult_en_o"	 [complexity=30,
+		importance=0.29006967326,
+		rank=0.00966898910866];
+	"[3]decoder_i.mult_en_o" -> "[3]mult_en_dec";
+	"[2]controller_i.DECODE"	 [complexity=17,
+		importance=0.628149400284,
+		rank=0.0369499647226];
+	"[2]controller_i.DECODE" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.nmi_mode_q"	 [complexity=22,
+		importance=0.217588300889,
+		rank=0.00989037731313];
+	"[3]controller_i.nmi_mode_d" -> "[2]controller_i.nmi_mode_q";
+	"[2]controller_i.instr_fetch_err" -> "[2]controller_i.exc_req_d";
+	"[2]controller_i.instr_fetch_err" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.nmi_mode_q"	 [complexity=26,
+		importance=0.277252892038,
+		rank=0.0106635727707];
+	"[3]controller_i.nmi_mode_q" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.nmi_mode_q" -> "[3]controller_i.handle_irq";
+	"[2]illegal_c_insn_i"	 [complexity=25,
+		importance=0.235278334194,
+		rank=0.00941113336774];
+	"[2]decoder_i.illegal_c_insn_i"	 [complexity=25,
+		importance=0.233782371503,
+		rank=0.00935129486013];
+	"[2]illegal_c_insn_i" -> "[2]decoder_i.illegal_c_insn_i";
+	"[2]decoder_i.mult_en_o"	 [complexity=26,
+		importance=0.23040508211,
+		rank=0.00886173392732];
+	"[2]mult_en_dec"	 [complexity=26,
+		importance=0.228667003893,
+		rank=0.00879488476512];
+	"[2]decoder_i.mult_en_o" -> "[2]mult_en_dec";
+	"[3]div_en_dec"	 [complexity=30,
+		importance=0.288331595043,
+		rank=0.00961105316809];
+	"[3]div_en_dec" -> "[3]multdiv_en_dec";
+	"[2]decoder_i.illegal_insn_o"	 [complexity=38,
+		importance=0.239572409528,
+		rank=0.00630453709285];
+	"[2]decoder_i.illegal_reg_rv32e" -> "[2]decoder_i.illegal_insn_o";
+	"[3]irq_nm_i"	 [complexity=26,
+		importance=0.278201743639,
+		rank=0.0107000670631];
+	"[3]irq_nm_i" -> "[3]controller_i.irq_nm_i";
+	"[2]illegal_insn_dec"	 [complexity=38,
+		importance=0.236635713883,
+		rank=0.0062272556285];
+	"[2]illegal_insn_dec" -> "[2]illegal_insn_o";
+	"[3]decoder_i.CSR_MIE"	 [complexity=34,
+		importance=0.30313581371,
+		rank=0.00891575922675];
+	"[3]decoder_i.CSR_MIE" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[2]decoder_i.jump_in_dec_o"	 [complexity=23,
+		importance=0.227879860168,
+		rank=0.00990782000732];
+	"[2]jump_in_dec"	 [complexity=23,
+		importance=0.226179710803,
+		rank=0.0098339004697];
+	"[2]decoder_i.jump_in_dec_o" -> "[2]jump_in_dec";
+	"[3]decoder_i.CSR_OP_WRITE"	 [complexity=45,
+		importance=4.53949458836,
+		rank=0.100877657519];
+	"[3]decoder_i.csr_op"	 [complexity=43,
+		importance=4.53799862567,
+		rank=0.10553485176];
+	"[3]decoder_i.CSR_OP_WRITE" -> "[3]decoder_i.csr_op";
+	"[3]decoder_i.CSR_OP_WRITE" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[1]debug_req_i"	 [complexity=6,
+		importance=0.0213912970575,
+		rank=0.00356521617624];
+	"[1]controller_i.debug_req_i"	 [complexity=6,
+		importance=0.019895334367,
+		rank=0.00331588906117];
+	"[1]debug_req_i" -> "[1]controller_i.debug_req_i";
+	"[3]controller_i.instr_fetch_err"	 [complexity=32,
+		importance=0.282392143744,
+		rank=0.008824754492];
+	"[3]controller_i.instr_fetch_err" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.instr_fetch_err" -> "[3]controller_i.ctrl_fsm_ns";
+	"[1]instr_rdata_i"	 [complexity=14,
+		importance=0.0261158495967,
+		rank=0.00186541782834];
+	"[1]decoder_i.instr_rdata_i"	 [complexity=14,
+		importance=0.0246198869063,
+		rank=0.00175856335045];
+	"[1]instr_rdata_i" -> "[1]decoder_i.instr_rdata_i";
+	"[2]decoder_i.CSR_OP_SET"	 [complexity=41,
+		importance=3.64452572112,
+		rank=0.0888908712468];
+	"[2]decoder_i.csr_op_o"	 [complexity=32,
+		importance=1.21348055126,
+		rank=0.0379212672268];
+	"[2]decoder_i.CSR_OP_SET" -> "[2]decoder_i.csr_op_o";
+	"[2]decoder_i.csr_op"	 [complexity=39,
+		importance=3.64302975843,
+		rank=0.0934110194469];
+	"[2]decoder_i.CSR_OP_SET" -> "[2]decoder_i.csr_op";
+	"[2]decoder_i.CSR_OP_SET" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[3]controller_i.mret_insn"	 [complexity=13,
+		importance=0.021638389021,
+		rank=0.00166449146315];
+	"[3]controller_i.mret_insn" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.mret_insn" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.mret_insn" -> "[3]controller_i.special_req";
+	"[3]controller_i.mret_insn" -> "[3]controller_i.illegal_umode";
+	"[3]controller_i.mret_insn" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.csr_illegal"	 [complexity=26,
+		importance=0.23304519928,
+		rank=0.00896327689537];
+	"[2]decoder_i.illegal_insn"	 [complexity=24,
+		importance=0.231538410631,
+		rank=0.00964743377628];
+	"[2]decoder_i.csr_illegal" -> "[2]decoder_i.illegal_insn";
+	"[2]controller_i.stall_lsu_i"	 [complexity=21,
+		importance=0.220958048735,
+		rank=0.0105218118445];
+	"[2]stall_lsu" -> "[2]controller_i.stall_lsu_i";
+	"[3]decoder_i.ecall_insn_o"	 [complexity=35,
+		importance=0.289311545543,
+		rank=0.00826604415836];
+	"[3]ecall_insn_dec"	 [complexity=35,
+		importance=0.287804756894,
+		rank=0.00822299305411];
+	"[3]decoder_i.ecall_insn_o" -> "[3]ecall_insn_dec";
+	"[2]controller_i.csr_pipe_flush_i" -> "[2]controller_i.csr_pipe_flush";
+	"[3]controller_i.instr_fetch_err_i"	 [complexity=35,
+		importance=0.28392747476,
+		rank=0.00811221356457];
+	"[3]controller_i.instr_fetch_err_i" -> "[3]controller_i.instr_fetch_err";
+	"[3]controller_i.ctrl_fsm_cs"	 [complexity=13,
+		importance=0.0857713090992,
+		rank=0.00659779300763];
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.halt_if"	 [complexity=15,
+		importance=0.0903714743098,
+		rank=0.00602476495399];
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.halt_if";
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.illegal_insn_d";
+	"[3]controller_i.ctrl_fsm_cs" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.stall_lsu_i" -> "[2]controller_i.stall";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.mult_en_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.jump_in_dec_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.csr_access_o"	 [complexity=32,
+		importance=0.72764578923,
+		rank=0.0227389309134];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.csr_access_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.csr_op";
+	"[2]decoder_i.dret_insn_o"	 [complexity=12,
+		importance=0.0230431108935,
+		rank=0.00192025924113];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.dret_insn_o";
+	"[2]decoder_i.wfi_insn_o"	 [complexity=43,
+		importance=0.239551681056,
+		rank=0.00557096932688];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.wfi_insn_o";
+	"[2]decoder_i.alu_op_a_mux_sel_o"	 [complexity=50,
+		importance=0.248706038048,
+		rank=0.00497412076096];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[2]decoder_i.branch_in_dec_o"	 [complexity=23,
+		importance=0.228112135109,
+		rank=0.00991791891776];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.branch_in_dec_o";
+	"[2]decoder_i.ecall_insn_o"	 [complexity=31,
+		importance=0.229646954393,
+		rank=0.00740796627074];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.ecall_insn_o";
+	"[2]decoder_i.regfile_we"	 [complexity=50,
+		importance=0.246586282163,
+		rank=0.00493172564326];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.regfile_we";
+	"[2]decoder_i.data_req_o"	 [complexity=25,
+		importance=0.451724827234,
+		rank=0.0180689930894];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.data_req_o";
+	"[2]decoder_i.ebrk_insn_o"	 [complexity=31,
+		importance=0.229646954393,
+		rank=0.00740796627074];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.ebrk_insn_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.alu_op_b_mux_sel_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.illegal_insn";
+	"[2]decoder_i.div_en_o"	 [complexity=26,
+		importance=0.23040508211,
+		rank=0.00886173392732];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.div_en_o";
+	"[2]decoder_i.mret_insn_o"	 [complexity=12,
+		importance=0.0230431108935,
+		rank=0.00192025924113];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.mret_insn_o";
+	"[3]decoder_i.instr_new_i"	 [complexity=57,
+		importance=1.84732743952,
+		rank=0.0324092533249];
+	"[3]decoder_i.instr_new_i" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[3]decoder_i.alu_op_b_mux_sel_o"	 [complexity=54,
+		importance=0.307632018084,
+		rank=0.00569688922378];
+	"[3]decoder_i.instr_new_i" -> "[3]decoder_i.alu_op_b_mux_sel_o";
+	"[3]decoder_i.regfile_we"	 [complexity=54,
+		importance=0.306250873313,
+		rank=0.00567131246875];
+	"[3]decoder_i.instr_new_i" -> "[3]decoder_i.regfile_we";
+	"[3]debug_single_step_i"	 [complexity=14,
+		importance=0.0412794941073,
+		rank=0.00294853529338];
+	"[3]debug_single_step_i" -> "[3]controller_i.debug_single_step_i";
+	"[2]decoder_i.instr"	 [complexity=16,
+		importance=0.0277219743873,
+		rank=0.00173262339921];
+	"[2]decoder_i.instr" -> "[2]decoder_i.regfile_raddr_b_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.mult_en_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.jump_in_dec_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.instr" -> "[2]decoder_i.opcode";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_op_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_access_o";
+	"[2]decoder_i.regfile_raddr_a_o"	 [complexity=50,
+		importance=0.246103514986,
+		rank=0.00492207029971];
+	"[2]decoder_i.instr" -> "[2]decoder_i.regfile_raddr_a_o";
+	"[2]decoder_i.regfile_waddr_o"	 [complexity=50,
+		importance=0.246103514986,
+		rank=0.00492207029971];
+	"[2]decoder_i.instr" -> "[2]decoder_i.regfile_waddr_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_op";
+	"[2]decoder_i.instr" -> "[2]decoder_i.dret_insn_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.wfi_insn_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.ecall_insn_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.regfile_we";
+	"[2]decoder_i.instr" -> "[2]decoder_i.ebrk_insn_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.alu_op_b_mux_sel_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.illegal_insn";
+	"[2]decoder_i.instr" -> "[2]decoder_i.div_en_o";
+	"[2]decoder_i.instr" -> "[2]decoder_i.mret_insn_o";
+	"[3]decoder_i.alu_op_b_mux_sel_o" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[3]controller_i.load_err_i"	 [complexity=28,
+		importance=0.280817362102,
+		rank=0.0100291915036];
+	"[3]controller_i.load_err_i" -> "[3]controller_i.exc_req_lsu";
+	"[3]controller_i.load_err_d"	 [complexity=13,
+		importance=0.0183524026333,
+		rank=0.00141172327948];
+	"[3]controller_i.load_err_i" -> "[3]controller_i.load_err_d";
+	"[3]WAIT_MULTICYCLE"	 [complexity=34,
+		importance=1.82403145567,
+		rank=0.0536479839903];
+	"[3]WAIT_MULTICYCLE" -> "[3]id_wb_fsm_ns";
+	"[2]controller_i.DBG_TAKEN_ID"	 [complexity=9,
+		importance=0.0641613064498,
+		rank=0.00712903404997];
+	"[2]controller_i.DBG_TAKEN_ID" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.DBG_TAKEN_IF"	 [complexity=13,
+		importance=0.189491993968,
+		rank=0.0145763072283];
+	"[2]controller_i.DBG_TAKEN_IF" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.load_err_q"	 [complexity=11,
+		importance=0.016388956003,
+		rank=0.00148990509118];
+	"[3]controller_i.load_err_d" -> "[2]controller_i.load_err_q";
+	"[2]decoder_i.csr_op_o" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]decoder_i.csr_access_o" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[3]controller_i.load_err_q"	 [complexity=15,
+		importance=0.0213610052655,
+		rank=0.0014240670177];
+	"[3]controller_i.load_err_q" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.load_err_q" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.load_err_q" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.wfi_insn" -> "[2]controller_i.special_req";
+	"[2]controller_i.wfi_insn" -> "[2]controller_i.illegal_umode";
+	"[2]controller_i.wfi_insn" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]stall_branch" -> "[3]controller_i.stall_branch_i";
+	"[3]id_wb_fsm_cs"	 [complexity=26,
+		importance=0.570940203795,
+		rank=0.0219592386075];
+	"[3]id_wb_fsm_cs" -> "[3]stall_branch";
+	"[3]id_wb_fsm_cs" -> "[3]stall_jump";
+	"[3]id_wb_fsm_cs" -> "[3]stall_multdiv";
+	"[3]id_wb_fsm_cs" -> "[3]stall_lsu";
+	"[3]id_wb_fsm_cs" -> "[3]id_wb_fsm_ns";
+	"[2]decoder_i.regfile_raddr_a_o" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[2]ecall_insn_dec"	 [complexity=31,
+		importance=0.228140165744,
+		rank=0.00735936018529];
+	"[2]controller_i.ecall_insn_i"	 [complexity=31,
+		importance=0.22589079149,
+		rank=0.00728679972548];
+	"[2]ecall_insn_dec" -> "[2]controller_i.ecall_insn_i";
+	"[3]controller_i.debug_ebreakm_i"	 [complexity=20,
+		importance=0.0899086496285,
+		rank=0.00449543248143];
+	"[3]controller_i.ebreak_into_debug"	 [complexity=13,
+		importance=0.087664688756,
+		rank=0.00674343759662];
+	"[3]controller_i.debug_ebreakm_i" -> "[3]controller_i.ebreak_into_debug";
+	"[3]branch_in_dec"	 [complexity=27,
+		importance=0.286071903376,
+		rank=0.0105952556806];
+	"[3]branch_in_dec" -> "[3]stall_branch";
+	"[2]controller_i.ebrk_insn_i"	 [complexity=31,
+		importance=0.22589079149,
+		rank=0.00728679972548];
+	"[2]controller_i.ebrk_insn_i" -> "[2]controller_i.ebrk_insn";
+	"[3]jump_in_dec"	 [complexity=27,
+		importance=0.285844301953,
+		rank=0.0105868259982];
+	"[3]jump_in_dec" -> "[3]stall_jump";
+	"[2]irq_nm_i"	 [complexity=22,
+		importance=0.21853715249,
+		rank=0.00993350693136];
+	"[2]irq_nm_i" -> "[2]controller_i.irq_nm_i";
+	"[3]lsu_load_err_i"	 [complexity=28,
+		importance=0.282313324792,
+		rank=0.0100826187426];
+	"[3]lsu_load_err_i" -> "[3]controller_i.load_err_i";
+	"[3]controller_i.id_in_ready_o"	 [complexity=12,
+		importance=0.0856628458921,
+		rank=0.00713857049101];
+	"[3]controller_i.stall" -> "[3]controller_i.id_in_ready_o";
+	"[3]controller_i.stall" -> "[3]controller_i.halt_if";
+	"[3]controller_i.stall" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.instr_new_i"	 [complexity=53,
+		importance=1.48933989262,
+		rank=0.028100752691];
+	"[2]decoder_i.instr_new_i" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[2]decoder_i.instr_new_i" -> "[2]decoder_i.regfile_we";
+	"[2]decoder_i.instr_new_i" -> "[2]decoder_i.alu_op_b_mux_sel_o";
+	"[3]controller_i.illegal_dret"	 [complexity=38,
+		importance=0.288002622126,
+		rank=0.00757901637174];
+	"[3]controller_i.dret_insn" -> "[3]controller_i.illegal_dret";
+	"[3]controller_i.dret_insn" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.dret_insn" -> "[3]controller_i.special_req";
+	"[3]controller_i.dret_insn" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.stall_multdiv_i"	 [complexity=25,
+		importance=0.280816467637,
+		rank=0.0112326587055];
+	"[3]controller_i.stall_multdiv_i" -> "[3]controller_i.stall";
+	"[3]debug_ebreakm_i"	 [complexity=20,
+		importance=0.0914046123189,
+		rank=0.00457023061595];
+	"[3]debug_ebreakm_i" -> "[3]controller_i.debug_ebreakm_i";
+	"[2]id_wb_fsm_cs" -> "[2]stall_lsu";
+	"[2]id_wb_fsm_cs" -> "[2]stall_jump";
+	"[2]id_wb_fsm_cs" -> "[2]stall_multdiv";
+	"[2]id_wb_fsm_cs" -> "[2]stall_branch";
+	"[3]decoder_i.OP_B_REG_B"	 [complexity=60,
+		importance=6.76940036054,
+		rank=0.112823339342];
+	"[3]decoder_i.OP_B_REG_B" -> "[3]decoder_i.alu_op_b_mux_sel_o";
+	"[3]decoder_i.OP_B_REG_B" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[3]controller_i.mret_insn_i"	 [complexity=16,
+		importance=0.0242589972527,
+		rank=0.0015161873283];
+	"[3]controller_i.mret_insn_i" -> "[3]controller_i.mret_insn";
+	"[2]debug_ebreaku_i"	 [complexity=16,
+		importance=0.0715164152691,
+		rank=0.00446977595432];
+	"[2]controller_i.debug_ebreaku_i"	 [complexity=16,
+		importance=0.0700204525786,
+		rank=0.00437627828617];
+	"[2]debug_ebreaku_i" -> "[2]controller_i.debug_ebreaku_i";
+	"[3]controller_i.id_in_ready_o" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]lsu_load_err_i"	 [complexity=24,
+		importance=0.222648733643,
+		rank=0.00927703056844];
+	"[2]controller_i.load_err_i"	 [complexity=24,
+		importance=0.221152770952,
+		rank=0.00921469878967];
+	"[2]lsu_load_err_i" -> "[2]controller_i.load_err_i";
+	"[3]controller_i.csr_mstatus_mie_i"	 [complexity=26,
+		importance=0.276705780949,
+		rank=0.0106425300365];
+	"[3]controller_i.csr_mstatus_mie_i" -> "[3]controller_i.handle_irq";
+	"[3]decoder_i.regfile_raddr_b_o"	 [complexity=54,
+		importance=0.305768106135,
+		rank=0.00566237233584];
+	"[3]decoder_i.regfile_raddr_b_o" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[3]mret_insn_dec"	 [complexity=16,
+		importance=0.0265083715071,
+		rank=0.0016567732192];
+	"[3]mret_insn_dec" -> "[3]controller_i.mret_insn_i";
+	"[2]decoder_i.regfile_waddr_o" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[3]decoder_i.illegal_c_insn_i"	 [complexity=29,
+		importance=0.293446962653,
+		rank=0.0101188607811];
+	"[3]decoder_i.illegal_insn"	 [complexity=28,
+		importance=0.29120300178,
+		rank=0.0104001072064];
+	"[3]decoder_i.illegal_c_insn_i" -> "[3]decoder_i.illegal_insn";
+	"[2]controller_i.special_req" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.special_req" -> "[2]controller_i.halt_if";
+	"[1]mret_insn_dec"	 [complexity=8,
+		importance=0.0165642729822,
+		rank=0.00207053412277];
+	"[1]controller_i.mret_insn_i"	 [complexity=8,
+		importance=0.0143148987278,
+		rank=0.00178936234098];
+	"[1]mret_insn_dec" -> "[1]controller_i.mret_insn_i";
+	"[3]decoder_i.csr_illegal"	 [complexity=30,
+		importance=0.292709790429,
+		rank=0.00975699301431];
+	"[3]decoder_i.csr_illegal" -> "[3]decoder_i.illegal_insn";
+	"[2]decoder_i.instr_rdata_i" -> "[2]decoder_i.instr";
+	"[2]debug_ebreakm_i"	 [complexity=16,
+		importance=0.0715164152691,
+		rank=0.00446977595432];
+	"[2]controller_i.debug_ebreakm_i"	 [complexity=16,
+		importance=0.0700204525786,
+		rank=0.00437627828617];
+	"[2]debug_ebreakm_i" -> "[2]controller_i.debug_ebreakm_i";
+	"[2]controller_i.exc_req_lsu"	 [complexity=21,
+		importance=0.219282809171,
+		rank=0.0104420385319];
+	"[2]controller_i.exc_req_lsu" -> "[2]controller_i.special_req";
+	"[2]debug_single_step_i"	 [complexity=10,
+		importance=0.0313353955824,
+		rank=0.00313353955824];
+	"[2]controller_i.debug_single_step_i"	 [complexity=10,
+		importance=0.029839432892,
+		rank=0.0029839432892];
+	"[2]debug_single_step_i" -> "[2]controller_i.debug_single_step_i";
+	"[3]debug_ebreaku_i"	 [complexity=20,
+		importance=0.0914046123189,
+		rank=0.00457023061595];
+	"[3]controller_i.debug_ebreaku_i"	 [complexity=20,
+		importance=0.0899086496285,
+		rank=0.00449543248143];
+	"[3]debug_ebreaku_i" -> "[3]controller_i.debug_ebreaku_i";
+	"[3]instr_fetch_err_i"	 [complexity=27,
+		importance=0.28499418815,
+		rank=0.0105553403019];
+	"[3]instr_fetch_err_i" -> "[3]controller_i.instr_fetch_err_i";
+	"[3]instr_fetch_err_i" -> "[3]stall_branch";
+	"[3]instr_fetch_err_i" -> "[3]stall_jump";
+	"[3]instr_fetch_err_i" -> "[3]stall_multdiv";
+	"[3]instr_fetch_err_i" -> "[3]stall_lsu";
+	"[3]instr_fetch_err_i" -> "[3]id_wb_fsm_ns";
+	"[2]data_req_dec"	 [complexity=25,
+		importance=0.450017122496,
+		rank=0.0180006848999];
+	"[2]data_req_dec" -> "[2]stall_lsu";
+	"[2]data_req_dec" -> "[2]stall_jump";
+	"[2]data_req_dec" -> "[2]stall_multdiv";
+	"[2]data_req_dec" -> "[2]stall_branch";
+	"[3]decoder_i.CSR_OP_CLEAR"	 [complexity=45,
+		importance=4.53949458836,
+		rank=0.100877657519];
+	"[3]decoder_i.CSR_OP_CLEAR" -> "[3]decoder_i.csr_op_o";
+	"[3]decoder_i.CSR_OP_CLEAR" -> "[3]decoder_i.csr_op";
+	"[3]IDLE"	 [complexity=30,
+		importance=0.91276370918,
+		rank=0.0304254569727];
+	"[3]IDLE" -> "[2]id_wb_fsm_cs";
+	"[3]IDLE" -> "[3]id_wb_fsm_ns";
+	"[3]controller_i.exc_req_d" -> "[2]controller_i.exc_req_q";
+	"[3]controller_i.exc_req_d" -> "[3]controller_i.special_req";
+	"[3]controller_i.stall_jump_i"	 [complexity=25,
+		importance=0.280886476439,
+		rank=0.0112354590575];
+	"[3]stall_jump" -> "[3]controller_i.stall_jump_i";
+	"[3]decoder_i.OP_A_REG_A"	 [complexity=72,
+		importance=14.494915535,
+		rank=0.201318271319];
+	"[3]decoder_i.OP_A_REG_A" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[3]decoder_i.OP_A_REG_A" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[3]illegal_c_insn_i"	 [complexity=29,
+		importance=0.294942925343,
+		rank=0.0101704457015];
+	"[3]illegal_c_insn_i" -> "[3]decoder_i.illegal_c_insn_i";
+	"[2]irq_pending_i"	 [complexity=22,
+		importance=0.21853715249,
+		rank=0.00993350693136];
+	"[2]controller_i.irq_pending_i"	 [complexity=22,
+		importance=0.217041189799,
+		rank=0.00986550862725];
+	"[2]irq_pending_i" -> "[2]controller_i.irq_pending_i";
+	"[3]decoder_i.opcode"	 [complexity=17,
+		importance=0.0302630930797,
+		rank=0.00178018194586];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.wfi_insn_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.mult_en_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.ecall_insn_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.alu_op_b_mux_sel_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.csr_illegal";
+	"[3]decoder_i.data_req_o"	 [complexity=29,
+		importance=0.571054009534,
+		rank=0.0196915175701];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.data_req_o";
+	"[3]decoder_i.mret_insn_o"	 [complexity=16,
+		importance=0.028015160156,
+		rank=0.00175094750975];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.mret_insn_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.regfile_we";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.csr_op";
+	"[3]decoder_i.jump_in_dec_o"	 [complexity=27,
+		importance=0.287544451318,
+		rank=0.0106497944933];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.jump_in_dec_o";
+	"[3]decoder_i.csr_access_o"	 [complexity=36,
+		importance=0.906639562679,
+		rank=0.0251844322966];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.csr_access_o";
+	"[3]decoder_i.dret_insn_o"	 [complexity=16,
+		importance=0.028015160156,
+		rank=0.00175094750975];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.dret_insn_o";
+	"[3]decoder_i.branch_in_dec_o"	 [complexity=27,
+		importance=0.287776726258,
+		rank=0.0106583972688];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.branch_in_dec_o";
+	"[3]decoder_i.div_en_o"	 [complexity=30,
+		importance=0.29006967326,
+		rank=0.00966898910866];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.div_en_o";
+	"[3]decoder_i.ebrk_insn_o"	 [complexity=35,
+		importance=0.289311545543,
+		rank=0.00826604415836];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.ebrk_insn_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.illegal_insn";
+	"[3]decoder_i.instr" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.regfile_waddr_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.wfi_insn_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_op_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.regfile_raddr_a_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.mult_en_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.ecall_insn_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.alu_op_b_mux_sel_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.regfile_raddr_b_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_illegal";
+	"[3]decoder_i.instr" -> "[3]decoder_i.opcode";
+	"[3]decoder_i.instr" -> "[3]decoder_i.mret_insn_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.regfile_we";
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_op";
+	"[3]decoder_i.instr" -> "[3]decoder_i.jump_in_dec_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_access_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.dret_insn_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.div_en_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.ebrk_insn_o";
+	"[3]decoder_i.instr" -> "[3]decoder_i.illegal_insn";
+	"[1]decoder_i.sv2v_cast_DB892"	 [complexity=12,
+		importance=0.0218149572452,
+		rank=0.00181791310376];
+	"[1]decoder_i.sv2v_cast_DB892" -> "[1]decoder_i.opcode";
+	"[3]controller_i.store_err_i"	 [complexity=15,
+		importance=0.0207366034054,
+		rank=0.00138244022703];
+	"[3]controller_i.store_err_i" -> "[3]controller_i.exc_req_lsu";
+	"[3]controller_i.store_err_d"	 [complexity=13,
+		importance=0.0184926425329,
+		rank=0.00142251096407];
+	"[3]controller_i.store_err_i" -> "[3]controller_i.store_err_d";
+	"[2]controller_i.store_err_q"	 [complexity=11,
+		importance=0.0164357110539,
+		rank=0.00149415555035];
+	"[3]controller_i.store_err_d" -> "[2]controller_i.store_err_q";
+	"[2]controller_i.SLEEP"	 [complexity=9,
+		importance=0.0641613064498,
+		rank=0.00712903404997];
+	"[2]controller_i.SLEEP" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.illegal_dret" -> "[3]controller_i.illegal_insn_d";
+	"[2]decoder_i.OP_B_REG_B"	 [complexity=56,
+		importance=5.45677935525,
+		rank=0.0974424884867];
+	"[2]decoder_i.OP_B_REG_B" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[2]decoder_i.OP_B_REG_B" -> "[2]decoder_i.alu_op_b_mux_sel_o";
+	"[2]controller_i.stall_multdiv_i"	 [complexity=21,
+		importance=0.221151876488,
+		rank=0.0105310417375];
+	"[2]controller_i.stall_multdiv_i" -> "[2]controller_i.stall";
+	"[3]controller_i.store_err_q"	 [complexity=15,
+		importance=0.0214077603163,
+		rank=0.00142718402109];
+	"[3]controller_i.store_err_q" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.store_err_q" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.store_err_q" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]decoder_i.data_req_o" -> "[3]data_req_dec";
+	"[3]controller_i.halt_if" -> "[3]controller_i.id_in_ready_o";
+	"[3]controller_i.ecall_insn_i"	 [complexity=35,
+		importance=0.285555382639,
+		rank=0.00815872521827];
+	"[3]ecall_insn_dec" -> "[3]controller_i.ecall_insn_i";
+	"[3]instr_rdata_i"	 [complexity=22,
+		importance=0.0360599481217,
+		rank=0.00163908855098];
+	"[3]instr_rdata_i" -> "[3]decoder_i.instr_rdata_i";
+	"[3]controller_i.debug_ebreaku_i" -> "[3]controller_i.ebreak_into_debug";
+	"[3]controller_i.ecall_insn"	 [complexity=32,
+		importance=0.282934774408,
+		rank=0.00884171170024];
+	"[3]controller_i.ecall_insn_i" -> "[3]controller_i.ecall_insn";
+	"[3]decoder_i.mret_insn_o" -> "[3]mret_insn_dec";
+	"[1]controller_i.store_err_q"	 [complexity=7,
+		importance=0.0114636617914,
+		rank=0.0016376659702];
+	"[1]controller_i.store_err_q" -> "[1]controller_i.debug_mode_d";
+	"[3]decoder_i.CSR_OP_READ"	 [complexity=45,
+		importance=4.53949458836,
+		rank=0.100877657519];
+	"[3]decoder_i.CSR_OP_READ" -> "[3]decoder_i.csr_op_o";
+	"[3]decoder_i.CSR_OP_READ" -> "[3]decoder_i.csr_op";
+	"[3]decoder_i.CSR_OP_READ" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.regfile_we" -> "[3]decoder_i.illegal_reg_rv32e";
+	"[2]controller_i.FIRST_FETCH"	 [complexity=11,
+		importance=0.126826650209,
+		rank=0.0115296954736];
+	"[2]controller_i.FIRST_FETCH" -> "[2]controller_i.ctrl_fsm_ns";
+	"[1]controller_i.instr_valid_i"	 [complexity=8,
+		importance=0.0135642522775,
+		rank=0.00169553153469];
+	"[1]controller_i.mret_insn"	 [complexity=5,
+		importance=0.011694290496,
+		rank=0.00233885809921];
+	"[1]controller_i.instr_valid_i" -> "[1]controller_i.mret_insn";
+	"[1]controller_i.dret_insn"	 [complexity=5,
+		importance=0.011694290496,
+		rank=0.00233885809921];
+	"[1]controller_i.instr_valid_i" -> "[1]controller_i.dret_insn";
+	"[2]decoder_i.csr_op" -> "[2]decoder_i.csr_op_o";
+	"[2]controller_i.ebrk_insn" -> "[2]controller_i.exc_req_d";
+	"[2]controller_i.ebrk_insn" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.FIRST_FETCH"	 [complexity=15,
+		importance=0.166603044309,
+		rank=0.0111068696206];
+	"[3]controller_i.FIRST_FETCH" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.dret_insn_o" -> "[2]dret_insn_dec";
+	"[1]controller_i.mret_insn_i" -> "[1]controller_i.mret_insn";
+	"[2]decoder_i.CSR_OP_READ"	 [complexity=41,
+		importance=3.64452572112,
+		rank=0.0888908712468];
+	"[2]decoder_i.CSR_OP_READ" -> "[2]decoder_i.csr_op_o";
+	"[2]decoder_i.CSR_OP_READ" -> "[2]decoder_i.csr_op";
+	"[2]decoder_i.CSR_OP_READ" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[1]controller_i.debug_req_i" -> "[1]controller_i.debug_mode_d";
+	"[3]controller_i.enter_debug_mode" -> "[3]controller_i.halt_if";
+	"[3]controller_i.enter_debug_mode" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]wfi_insn_dec"	 [complexity=43,
+		importance=0.238044892407,
+		rank=0.0055359277304];
+	"[2]decoder_i.wfi_insn_o" -> "[2]wfi_insn_dec";
+	debug_mode_o	 [complexity=0,
+		importance=0.00228185682916,
+		rank=0.0];
+	"[3]csr_mstatus_mie_i"	 [complexity=26,
+		importance=0.278201743639,
+		rank=0.0107000670631];
+	"[3]csr_mstatus_mie_i" -> "[3]controller_i.csr_mstatus_mie_i";
+	"[1]controller_i.dret_insn_i"	 [complexity=8,
+		importance=0.0143148987278,
+		rank=0.00178936234098];
+	"[1]controller_i.dret_insn_i" -> "[1]controller_i.dret_insn";
+	"[2]decoder_i.alu_op_a_mux_sel_o" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.wfi_insn";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.csr_pipe_flush";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.instr_fetch_err";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.mret_insn";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.dret_insn";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.halt_if";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.enter_debug_mode";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.ebrk_insn";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.ecall_insn";
+	"[3]controller_i.instr_valid_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]priv_mode_i"	 [complexity=20,
+		importance=0.0914046123189,
+		rank=0.00457023061595];
+	"[3]controller_i.priv_mode_i"	 [complexity=20,
+		importance=0.0899086496285,
+		rank=0.00449543248143];
+	"[3]priv_mode_i" -> "[3]controller_i.priv_mode_i";
+	"[2]instr_fetch_err_i"	 [complexity=23,
+		importance=0.225329597001,
+		rank=0.00979693900003];
+	"[2]instr_fetch_err_i" -> "[2]stall_lsu";
+	"[2]instr_fetch_err_i" -> "[2]stall_jump";
+	"[2]instr_fetch_err_i" -> "[2]stall_multdiv";
+	"[2]instr_fetch_err_i" -> "[2]stall_branch";
+	"[2]controller_i.instr_fetch_err_i"	 [complexity=31,
+		importance=0.22426288361,
+		rank=0.00723428656807];
+	"[2]instr_fetch_err_i" -> "[2]controller_i.instr_fetch_err_i";
+	"[3]controller_i.stall_jump_i" -> "[3]controller_i.stall";
+	"[3]decoder_i.sv2v_cast_290A1"	 [complexity=46,
+		importance=1.81133506881,
+		rank=0.0393768493218];
+	"[3]decoder_i.sv2v_cast_290A1" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.illegal_reg_rv32e" -> "[3]decoder_i.illegal_insn_o";
+	"[2]stall_jump" -> "[2]controller_i.stall_jump_i";
+	"[3]irq_pending_i"	 [complexity=26,
+		importance=0.278201743639,
+		rank=0.0107000670631];
+	"[3]controller_i.irq_pending_i"	 [complexity=26,
+		importance=0.276705780949,
+		rank=0.0106425300365];
+	"[3]irq_pending_i" -> "[3]controller_i.irq_pending_i";
+	"[1]instr_valid_i"	 [complexity=8,
+		importance=0.0150602149679,
+		rank=0.00188252687099];
+	"[1]instr_valid_i" -> "[1]controller_i.instr_valid_i";
+	"[1]controller_i.exc_req_q" -> "[1]controller_i.debug_mode_d";
+	"[2]controller_i.ctrl_fsm_cs"	 [complexity=9,
+		importance=0.0658831120493,
+		rank=0.00732034578325];
+	"[2]controller_i.ctrl_fsm_cs" -> "[2]controller_i.exc_req_d";
+	"[2]controller_i.ctrl_fsm_cs" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.ctrl_fsm_cs" -> "[2]controller_i.illegal_insn_d";
+	"[2]controller_i.ctrl_fsm_cs" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.ctrl_fsm_cs" -> "[2]controller_i.halt_if";
+	"[2]controller_i.illegal_insn_i"	 [complexity=34,
+		importance=0.229945031031,
+		rank=0.00676308914797];
+	"[2]illegal_insn_o" -> "[2]controller_i.illegal_insn_i";
+	"[2]controller_i.fetch_enable_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[1]dret_insn_dec" -> "[1]controller_i.dret_insn_i";
+	"[3]decoder_i.CSR_OP_SET"	 [complexity=45,
+		importance=4.53949458836,
+		rank=0.100877657519];
+	"[3]decoder_i.CSR_OP_SET" -> "[3]decoder_i.csr_op_o";
+	"[3]decoder_i.CSR_OP_SET" -> "[3]decoder_i.csr_op";
+	"[3]decoder_i.CSR_OP_SET" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]controller_i.ebrk_insn" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.ebrk_insn" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]debug_req_i"	 [complexity=14,
+		importance=0.0412794941073,
+		rank=0.00294853529338];
+	"[3]controller_i.debug_req_i"	 [complexity=14,
+		importance=0.0397835314169,
+		rank=0.00284168081549];
+	"[3]debug_req_i" -> "[3]controller_i.debug_req_i";
+	"[3]decoder_i.csr_op" -> "[3]decoder_i.csr_op_o";
+	"[3]lsu_store_err_i"	 [complexity=15,
+		importance=0.0222325660958,
+		rank=0.00148217107306];
+	"[3]lsu_store_err_i" -> "[3]controller_i.store_err_i";
+	"[3]decoder_i.jump_in_dec_o" -> "[3]jump_in_dec";
+	"[2]controller_i.WAIT_SLEEP"	 [complexity=9,
+		importance=0.0641613064498,
+		rank=0.00712903404997];
+	"[2]controller_i.WAIT_SLEEP" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]decoder_i.csr_access_o" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.dret_insn_o" -> "[3]dret_insn_dec";
+	"[2]branch_in_dec"	 [complexity=23,
+		importance=0.226407312227,
+		rank=0.00984379618377];
+	"[2]decoder_i.branch_in_dec_o" -> "[2]branch_in_dec";
+	"[2]controller_i.illegal_insn_i" -> "[2]controller_i.illegal_insn_d";
+	"[2]controller_i.IRQ_TAKEN"	 [complexity=13,
+		importance=0.189491993968,
+		rank=0.0145763072283];
+	"[2]controller_i.IRQ_TAKEN" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.illegal_insn_d" -> "[2]controller_i.exc_req_d";
+	"[2]decoder_i.sv2v_cast_290A1"	 [complexity=42,
+		importance=1.45334752191,
+		rank=0.0346035124264];
+	"[2]decoder_i.sv2v_cast_290A1" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[3]controller_i.priv_mode_i" -> "[3]controller_i.illegal_umode";
+	"[3]controller_i.priv_mode_i" -> "[3]controller_i.ebreak_into_debug";
+	"[1]decoder_i.instr"	 [complexity=12,
+		importance=0.0227499251248,
+		rank=0.00189582709374];
+	"[1]decoder_i.instr_rdata_i" -> "[1]decoder_i.instr";
+	"[3]decoder_i.branch_in_dec_o" -> "[3]branch_in_dec";
+	"[3]controller_i.BOOT_SET"	 [complexity=13,
+		importance=0.0840495034996,
+		rank=0.00646534642305];
+	"[3]controller_i.BOOT_SET" -> "[3]controller_i.ctrl_fsm_ns";
+	"[1]debug_single_step_i"	 [complexity=6,
+		importance=0.0213912970575,
+		rank=0.00356521617624];
+	"[1]debug_single_step_i" -> "[1]controller_i.debug_single_step_i";
+	"[3]controller_i.debug_mode_d" -> "[2]controller_i.debug_mode_q";
+	"[3]stall_multdiv" -> "[3]controller_i.stall_multdiv_i";
+	"[2]decoder_i.OP_A_REG_A"	 [complexity=68,
+		importance=11.6906797509,
+		rank=0.171921761043];
+	"[2]decoder_i.OP_A_REG_A" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[2]decoder_i.OP_A_REG_A" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[3]csr_pipe_flush"	 [complexity=28,
+		importance=0.291615292723,
+		rank=0.0104148318829];
+	"[3]decoder_i.csr_pipe_flush_o" -> "[3]csr_pipe_flush";
+	"[3]controller_i.debug_mode_q"	 [complexity=14,
+		importance=0.0215002758495,
+		rank=0.00153573398925];
+	"[3]controller_i.debug_mode_q" -> "[3]controller_i.illegal_dret";
+	"[3]controller_i.debug_mode_q" -> "[3]controller_i.enter_debug_mode";
+	"[3]controller_i.debug_mode_q" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.debug_mode_q" -> "[3]controller_i.handle_irq";
+	"[3]controller_i.debug_mode_q" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]priv_mode_i"	 [complexity=16,
+		importance=0.0715164152691,
+		rank=0.00446977595432];
+	"[2]controller_i.priv_mode_i"	 [complexity=16,
+		importance=0.0700204525786,
+		rank=0.00437627828617];
+	"[2]priv_mode_i" -> "[2]controller_i.priv_mode_i";
+	"[2]ebrk_insn"	 [complexity=31,
+		importance=0.228140165744,
+		rank=0.00735936018529];
+	"[2]ebrk_insn" -> "[2]controller_i.ebrk_insn_i";
+	"[2]decoder_i.ecall_insn_o" -> "[2]ecall_insn_dec";
+	"[3]decoder_i.OP_A_IMM"	 [complexity=60,
+		importance=0.926607850283,
+		rank=0.0154434641714];
+	"[3]decoder_i.OP_A_IMM" -> "[3]decoder_i.alu_op_a_mux_sel_o";
+	"[2]lsu_store_err_i"	 [complexity=11,
+		importance=0.0172605168334,
+		rank=0.00156913789394];
+	"[2]controller_i.store_err_i"	 [complexity=11,
+		importance=0.0157645541429,
+		rank=0.00143314128572];
+	"[2]lsu_store_err_i" -> "[2]controller_i.store_err_i";
+	"[2]decoder_i.CSR_MIE"	 [complexity=30,
+		importance=0.24347122256,
+		rank=0.00811570741866];
+	"[2]decoder_i.CSR_MIE" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[3]controller_i.wfi_insn_i"	 [complexity=47,
+		importance=0.295460109302,
+		rank=0.0062863853043];
+	"[3]wfi_insn_dec" -> "[3]controller_i.wfi_insn_i";
+	"[2]controller_i.wfi_insn_i"	 [complexity=43,
+		importance=0.235795518153,
+		rank=0.00548361670123];
+	"[2]wfi_insn_dec" -> "[2]controller_i.wfi_insn_i";
+	"[3]controller_i.wfi_insn_i" -> "[3]controller_i.wfi_insn";
+	"[2]mret_insn_dec"	 [complexity=12,
+		importance=0.0215363222447,
+		rank=0.00179469352039];
+	"[2]controller_i.mret_insn_i"	 [complexity=12,
+		importance=0.0192869479903,
+		rank=0.00160724566586];
+	"[2]mret_insn_dec" -> "[2]controller_i.mret_insn_i";
+	"[2]decoder_i.OP_A_CURRPC"	 [complexity=62,
+		importance=1.49373219098,
+		rank=0.0240924546932];
+	"[2]decoder_i.OP_A_CURRPC" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[2]decoder_i.csr_pipe_flush_o" -> "[2]csr_pipe_flush";
+	"[2]controller_i.ebreak_into_debug"	 [complexity=9,
+		importance=0.0677764917062,
+		rank=0.00753072130069];
+	"[2]controller_i.debug_ebreaku_i" -> "[2]controller_i.ebreak_into_debug";
+	"[2]instr_new_i"	 [complexity=23,
+		importance=0.225329597001,
+		rank=0.00979693900003];
+	"[2]instr_new_i" -> "[2]stall_lsu";
+	"[2]instr_new_i" -> "[2]decoder_i.instr_new_i";
+	"[2]instr_new_i" -> "[2]stall_jump";
+	"[2]instr_new_i" -> "[2]stall_multdiv";
+	"[2]instr_new_i" -> "[2]stall_branch";
+	"[2]controller_i.dret_insn" -> "[2]controller_i.illegal_dret";
+	"[2]controller_i.dret_insn" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.dret_insn" -> "[2]controller_i.special_req";
+	"[2]controller_i.dret_insn" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.fetch_enable_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.illegal_insn_q"	 [complexity=8,
+		importance=0.0658242680841,
+		rank=0.00822803351051];
+	"[2]controller_i.illegal_insn_q" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.id_in_ready_o" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]mult_en_dec" -> "[2]multdiv_en_dec";
+	"[2]decoder_i.regfile_we" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[2]branch_decision_i"	 [complexity=23,
+		importance=0.225554861946,
+		rank=0.0098067331281];
+	"[2]branch_decision_i" -> "[2]stall_branch";
+	"[3]controller_i.irq_pending_i" -> "[3]controller_i.handle_irq";
+	"[3]controller_i.irq_pending_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]stall_multdiv" -> "[2]controller_i.stall_multdiv_i";
+	"[2]controller_i.stall_branch_i"	 [complexity=21,
+		importance=0.221296965908,
+		rank=0.0105379507575];
+	"[2]stall_branch" -> "[2]controller_i.stall_branch_i";
+	"[2]decoder_i.CSR_OP_CLEAR"	 [complexity=41,
+		importance=3.64452572112,
+		rank=0.0888908712468];
+	"[2]decoder_i.CSR_OP_CLEAR" -> "[2]decoder_i.csr_op_o";
+	"[2]decoder_i.CSR_OP_CLEAR" -> "[2]decoder_i.csr_op";
+	"[3]controller_i.PRIV_LVL_U"	 [complexity=20,
+		importance=0.0891606514465,
+		rank=0.00445803257232];
+	"[3]controller_i.PRIV_LVL_U" -> "[3]controller_i.ebreak_into_debug";
+	"[2]decoder_i.data_req_o" -> "[2]data_req_dec";
+	"[2]controller_i.illegal_umode" -> "[2]controller_i.illegal_insn_d";
+	"[2]controller_i.debug_ebreakm_i" -> "[2]controller_i.ebreak_into_debug";
+	"[3]controller_i.PRIV_LVL_M"	 [complexity=20,
+		importance=0.0891606514465,
+		rank=0.00445803257232];
+	"[3]controller_i.PRIV_LVL_M" -> "[3]controller_i.illegal_umode";
+	"[3]controller_i.PRIV_LVL_M" -> "[3]controller_i.ebreak_into_debug";
+	"[3]controller_i.special_req" -> "[3]controller_i.halt_if";
+	"[3]controller_i.special_req" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.instr_fetch_err_i" -> "[2]controller_i.instr_fetch_err";
+	"[1]controller_i.debug_mode_q" -> "[1]controller_i.debug_mode_d";
+	"[2]decoder_i.CSR_OP_WRITE"	 [complexity=41,
+		importance=3.64452572112,
+		rank=0.0888908712468];
+	"[2]decoder_i.CSR_OP_WRITE" -> "[2]decoder_i.csr_op";
+	"[2]decoder_i.CSR_OP_WRITE" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]rst_ni"	 [complexity=7,
+		importance=0.0261977798028,
+		rank=0.00374253997183];
+	"[2]controller_i.rst_ni"	 [complexity=7,
+		importance=0.0247018171124,
+		rank=0.00352883101605];
+	"[2]rst_ni" -> "[2]controller_i.rst_ni";
+	"[1]controller_i.debug_mode_d" -> "controller_i.debug_mode_q";
+	"[2]controller_i.nmi_mode_q" -> "[2]controller_i.handle_irq";
+	"[2]controller_i.csr_mstatus_tw_i" -> "[2]controller_i.illegal_umode";
+	"[3]controller_i.WAIT_SLEEP"	 [complexity=13,
+		importance=0.0840495034996,
+		rank=0.00646534642305];
+	"[3]controller_i.WAIT_SLEEP" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.mret_insn_i" -> "[2]controller_i.mret_insn";
+	"[1]controller_i.ctrl_fsm_cs" -> "[1]controller_i.debug_mode_d";
+	"[2]controller_i.wfi_insn_i" -> "[2]controller_i.wfi_insn";
+	"[2]controller_i.FLUSH"	 [complexity=34,
+		importance=0.228082906813,
+		rank=0.00670832078862];
+	"[2]controller_i.FLUSH" -> "[2]controller_i.exc_req_d";
+	"[2]controller_i.FLUSH" -> "[2]controller_i.illegal_insn_d";
+	"[2]controller_i.FLUSH" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.ebrk_insn_o" -> "[2]ebrk_insn";
+	"[3]decoder_i.OP_B_IMM"	 [complexity=84,
+		importance=11.999144668,
+		rank=0.142846960333];
+	"[3]decoder_i.OP_B_IMM" -> "[3]decoder_i.alu_op_b_mux_sel_o";
+	"[2]controller_i.debug_req_i" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.debug_req_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.debug_req_i" -> "[2]controller_i.enter_debug_mode";
+	"[3]controller_i.exc_req_q"	 [complexity=15,
+		importance=0.0212896937068,
+		rank=0.00141931291379];
+	"[3]controller_i.exc_req_q" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.exc_req_q" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.exc_req_q" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]stall_lsu" -> "[3]controller_i.stall_lsu_i";
+	"[3]controller_i.illegal_umode" -> "[3]controller_i.illegal_insn_d";
+	"[2]controller_i.ctrl_fsm_ns" -> "[1]controller_i.ctrl_fsm_cs";
+	"controller_i.debug_mode_o"	 [complexity=0,
+		importance=0.00385363748482,
+		rank=0.0];
+	"controller_i.debug_mode_o" -> debug_mode_o;
+	"[3]controller_i.debug_req_i" -> "[3]controller_i.enter_debug_mode";
+	"[3]controller_i.debug_req_i" -> "[3]controller_i.debug_mode_d";
+	"[3]controller_i.debug_req_i" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.ecall_insn_i" -> "[2]controller_i.ecall_insn";
+	"[2]controller_i.rst_ni" -> "[1]controller_i.load_err_q";
+	"[2]controller_i.rst_ni" -> "[1]controller_i.store_err_q";
+	"[2]controller_i.rst_ni" -> "[1]controller_i.exc_req_q";
+	"[2]controller_i.rst_ni" -> "[1]controller_i.debug_mode_q";
+	"[2]controller_i.rst_ni" -> "[1]controller_i.ctrl_fsm_cs";
+	"controller_i.debug_mode_q" -> "controller_i.debug_mode_o";
+	"[3]controller_i.csr_pipe_flush_i"	 [complexity=28,
+		importance=0.28510736249,
+		rank=0.0101824058032];
+	"[3]controller_i.csr_pipe_flush_i" -> "[3]controller_i.csr_pipe_flush";
+	"[3]multdiv_en_dec" -> "[3]stall_multdiv";
+	"[2]decoder_i.OP_A_IMM"	 [complexity=56,
+		importance=0.747614076834,
+		rank=0.013350251372];
+	"[2]decoder_i.OP_A_IMM" -> "[2]decoder_i.alu_op_a_mux_sel_o";
+	"[3]controller_i.SLEEP"	 [complexity=13,
+		importance=0.0840495034996,
+		rank=0.00646534642305];
+	"[3]controller_i.SLEEP" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.halt_if" -> "[2]controller_i.id_in_ready_o";
+	"[3]instr_new_i"	 [complexity=27,
+		importance=0.28499418815,
+		rank=0.0105553403019];
+	"[3]instr_new_i" -> "[3]decoder_i.instr_new_i";
+	"[3]instr_new_i" -> "[3]stall_branch";
+	"[3]instr_new_i" -> "[3]stall_jump";
+	"[3]instr_new_i" -> "[3]stall_multdiv";
+	"[3]instr_new_i" -> "[3]stall_lsu";
+	"[3]instr_new_i" -> "[3]id_wb_fsm_ns";
+	"[2]lsu_valid_i"	 [complexity=25,
+		importance=0.225329597001,
+		rank=0.00901318388002];
+	"[2]lsu_valid_i" -> "[2]stall_lsu";
+	"[2]lsu_valid_i" -> "[2]stall_jump";
+	"[2]lsu_valid_i" -> "[2]stall_multdiv";
+	"[2]lsu_valid_i" -> "[2]stall_branch";
+	"[2]controller_i.csr_pipe_flush" -> "[2]controller_i.special_req";
+	"[2]controller_i.csr_pipe_flush" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.handle_irq" -> "[3]controller_i.nmi_mode_d";
+	"[3]controller_i.handle_irq" -> "[3]controller_i.halt_if";
+	"[3]controller_i.handle_irq" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]illegal_insn_dec" -> "[3]illegal_insn_o";
+	"[3]illegal_csr_insn_i"	 [complexity=42,
+		importance=0.294831700497,
+		rank=0.00701980239278];
+	"[3]illegal_csr_insn_i" -> "[3]illegal_insn_o";
+	"[3]controller_i.illegal_insn_i" -> "[3]controller_i.illegal_insn_d";
+	"[2]controller_i.load_err_q" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.load_err_q" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]jump_in_dec" -> "[2]stall_jump";
+	"[3]controller_i.illegal_insn_d" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.illegal_insn_d" -> "[2]controller_i.illegal_insn_q";
+	"[3]id_wb_fsm_ns" -> "[2]id_wb_fsm_cs";
+	"[2]controller_i.load_err_d"	 [complexity=9,
+		importance=0.0133803533708,
+		rank=0.00148670593009];
+	"[2]controller_i.load_err_d" -> "[1]controller_i.load_err_q";
+	"[2]decoder_i.alu_op_b_mux_sel_o" -> "[2]decoder_i.illegal_reg_rv32e";
+	"[3]controller_i.illegal_insn_q"	 [complexity=12,
+		importance=0.085712465134,
+		rank=0.00714270542783];
+	"[3]controller_i.illegal_insn_q" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.load_err_i" -> "[2]controller_i.exc_req_lsu";
+	"[2]controller_i.load_err_i" -> "[2]controller_i.load_err_d";
+	"[2]decoder_i.illegal_c_insn_i" -> "[2]decoder_i.illegal_insn";
+	"[3]controller_i.RESET"	 [complexity=11,
+		importance=0.0673790747397,
+		rank=0.00612537043088];
+	"[3]controller_i.RESET" -> "[2]controller_i.ctrl_fsm_cs";
+	"[3]decoder_i.div_en_o" -> "[3]div_en_dec";
+	"[1]decoder_i.instr" -> "[1]decoder_i.dret_insn_o";
+	"[1]decoder_i.instr" -> "[1]decoder_i.opcode";
+	"[1]decoder_i.instr" -> "[1]decoder_i.mret_insn_o";
+	"[3]decoder_i.ebrk_insn_o" -> "[3]ebrk_insn";
+	"[2]controller_i.ebreak_into_debug" -> "[2]controller_i.ctrl_fsm_ns";
+	"[3]controller_i.ebreak_into_debug" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.CSR_DSCRATCH1"	 [complexity=36,
+		importance=0.24347122256,
+		rank=0.00676308951555];
+	"[2]decoder_i.CSR_DSCRATCH1" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]decoder_i.CSR_DSCRATCH0"	 [complexity=36,
+		importance=0.24347122256,
+		rank=0.00676308951555];
+	"[2]decoder_i.CSR_DSCRATCH0" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]controller_i.debug_single_step_i" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.debug_single_step_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.debug_single_step_i" -> "[2]controller_i.enter_debug_mode";
+	"[2]controller_i.irq_pending_i" -> "[2]controller_i.handle_irq";
+	"[2]controller_i.irq_pending_i" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]decoder_i.CSR_DCSR"	 [complexity=36,
+		importance=0.24347122256,
+		rank=0.00676308951555];
+	"[2]decoder_i.CSR_DCSR" -> "[2]decoder_i.csr_pipe_flush_o";
+	"[2]controller_i.priv_mode_i" -> "[2]controller_i.illegal_umode";
+	"[2]controller_i.priv_mode_i" -> "[2]controller_i.ebreak_into_debug";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.mult_en_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.jump_in_dec_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.csr_access_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.branch_in_dec_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.regfile_we";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.data_req_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.div_en_o";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.illegal_insn_o";
+	"[2]decoder_i.div_en_o" -> "[2]div_en_dec";
+	"[2]controller_i.PRIV_LVL_U"	 [complexity=16,
+		importance=0.0692724543966,
+		rank=0.00432952839979];
+	"[2]controller_i.PRIV_LVL_U" -> "[2]controller_i.ebreak_into_debug";
+	"[3]ex_valid_i"	 [complexity=29,
+		importance=0.28499418815,
+		rank=0.00982738579828];
+	"[3]ex_valid_i" -> "[3]stall_branch";
+	"[3]ex_valid_i" -> "[3]stall_jump";
+	"[3]ex_valid_i" -> "[3]stall_multdiv";
+	"[3]ex_valid_i" -> "[3]stall_lsu";
+	"[3]ex_valid_i" -> "[3]id_wb_fsm_ns";
+	"[2]controller_i.PRIV_LVL_M"	 [complexity=16,
+		importance=0.0692724543966,
+		rank=0.00432952839979];
+	"[2]controller_i.PRIV_LVL_M" -> "[2]controller_i.illegal_umode";
+	"[2]controller_i.PRIV_LVL_M" -> "[2]controller_i.ebreak_into_debug";
+	"[3]controller_i.DECODE"	 [complexity=21,
+		importance=0.827031370782,
+		rank=0.0393824462277];
+	"[3]controller_i.DECODE" -> "[3]controller_i.ctrl_fsm_ns";
+	"[3]decoder_i.sv2v_cast_DB892"	 [complexity=20,
+		importance=0.0317590557701,
+		rank=0.00158795278851];
+	"[3]decoder_i.sv2v_cast_DB892" -> "[3]decoder_i.opcode";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.illegal_insn_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.mult_en_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.data_req_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.regfile_we";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.jump_in_dec_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.csr_access_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.branch_in_dec_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.div_en_o";
+	"[2]controller_i.stall_branch_i" -> "[2]controller_i.stall";
+	"[3]decoder_i.CSR_DPC"	 [complexity=40,
+		importance=0.30313581371,
+		rank=0.00757839534274];
+	"[3]decoder_i.CSR_DPC" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[3]decoder_i.CSR_MSTATUS"	 [complexity=34,
+		importance=0.30313581371,
+		rank=0.00891575922675];
+	"[3]decoder_i.CSR_MSTATUS" -> "[3]decoder_i.csr_pipe_flush_o";
+	"[2]multdiv_en_dec" -> "[2]stall_multdiv";
+	"[2]decoder_i.mret_insn_o" -> "[2]mret_insn_dec";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.exc_req_q";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.debug_mode_q";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.ctrl_fsm_cs";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.illegal_insn_q";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.nmi_mode_q";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.load_err_q";
+	"[3]controller_i.rst_ni" -> "[2]controller_i.store_err_q";
+	"[1]decoder_i.mret_insn_o" -> "[1]mret_insn_dec";
+	"[3]controller_i.ecall_insn" -> "[3]controller_i.exc_req_d";
+	"[3]controller_i.ecall_insn" -> "[3]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.store_err_d"	 [complexity=9,
+		importance=0.0135205932705,
+		rank=0.00150228814116];
+	"[2]controller_i.store_err_d" -> "[1]controller_i.store_err_q";
+	"[2]decoder_i.illegal_insn_o" -> "[2]illegal_insn_dec";
+	"[1]controller_i.mret_insn" -> "[1]controller_i.debug_mode_d";
+	"[2]controller_i.store_err_i" -> "[2]controller_i.exc_req_lsu";
+	"[2]controller_i.store_err_i" -> "[2]controller_i.store_err_d";
+	"[3]csr_pipe_flush" -> "[3]controller_i.csr_pipe_flush_i";
+	"[3]controller_i.ctrl_fsm_ns" -> "[2]controller_i.ctrl_fsm_cs";
+	"[2]controller_i.store_err_q" -> "[2]controller_i.debug_mode_d";
+	"[2]controller_i.store_err_q" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]branch_in_dec" -> "[2]stall_branch";
+	"[2]controller_i.enter_debug_mode" -> "[2]controller_i.ctrl_fsm_ns";
+	"[2]controller_i.enter_debug_mode" -> "[2]controller_i.halt_if";
+	"[1]controller_i.dret_insn" -> "[1]controller_i.debug_mode_d";
+}

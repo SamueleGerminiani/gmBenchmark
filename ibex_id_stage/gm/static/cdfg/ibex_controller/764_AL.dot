@@ -1,0 +1,74 @@
+strict digraph "" {
+	node [label="\N"];
+	"765:BL"	 [ast="<pyverilog.vparser.ast.Block object at 0x7feaf2468c50>",
+		fillcolor=turquoise,
+		label="765:BL
+ctrl_fsm_cs <= RESET;
+nmi_mode_q <= 1'b0;
+debug_mode_q <= 1'b0;
+load_err_q <= 1'b0;
+store_err_q <= 1'b0;
+exc_req_q <= 1'b0;
+\
+illegal_insn_q <= 1'b0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf23f17d0>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7feaf42e8dd0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf23f1350>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7feaf23f1a10>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf23f1610>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7feaf23f1890>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf2468c10>]",
+		style=filled,
+		typ=Block];
+	"Leaf_764:AL"	 [def_var="['debug_mode_q', 'illegal_insn_q', 'load_err_q', 'store_err_q', 'ctrl_fsm_cs', 'nmi_mode_q', 'exc_req_q']",
+		label="Leaf_764:AL"];
+	"765:BL" -> "Leaf_764:AL"	 [cond="[]",
+		lineno=None];
+	"764:AL"	 [ast="<pyverilog.vparser.ast.Always object at 0x7feaf2468750>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="764:AL",
+		sens="['clk_i', 'rst_ni']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['RESET', 'rst_ni', 'exc_req_d', 'nmi_mode_d', 'illegal_insn_d', 'ctrl_fsm_ns', 'load_err_d', 'debug_mode_d', 'store_err_d']"];
+	"764:BL"	 [ast="<pyverilog.vparser.ast.Block object at 0x7feaf2468b10>",
+		fillcolor=turquoise,
+		label="764:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"764:AL" -> "764:BL"	 [cond="[]",
+		lineno=None];
+	"774:BL"	 [ast="<pyverilog.vparser.ast.Block object at 0x7feaf2468f10>",
+		fillcolor=turquoise,
+		label="774:BL
+ctrl_fsm_cs <= ctrl_fsm_ns;
+nmi_mode_q <= nmi_mode_d;
+debug_mode_q <= debug_mode_d;
+load_err_q <= load_err_d;
+store_err_q <= \
+store_err_d;
+exc_req_q <= exc_req_d;
+illegal_insn_q <= illegal_insn_d;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf24686d0>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7feaf2468fd0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf256cb90>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7feaf24a0510>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf2402350>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7feaf2402490>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7feaf24025d0>]",
+		style=filled,
+		typ=Block];
+	"774:BL" -> "Leaf_764:AL"	 [cond="[]",
+		lineno=None];
+	"765:IF"	 [ast="<pyverilog.vparser.ast.IfStatement object at 0x7feaf2468e50>",
+		fillcolor=springgreen,
+		label="765:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"764:BL" -> "765:IF"	 [cond="[]",
+		lineno=None];
+	"765:IF" -> "765:BL"	 [cond="['rst_ni']",
+		label="(!rst_ni)",
+		lineno=765];
+	"765:IF" -> "774:BL"	 [cond="['rst_ni']",
+		label="!((!rst_ni))",
+		lineno=765];
+}

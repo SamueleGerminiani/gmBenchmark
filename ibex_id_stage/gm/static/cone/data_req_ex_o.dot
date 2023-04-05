@@ -1,0 +1,419 @@
+strict digraph "" {
+	"[3]lsu_valid_i"	 [complexity=24,
+		importance=0.728773045609,
+		rank=0.0303655435671];
+	"[3]instr_multicycle_done_n"	 [complexity=20,
+		importance=0.0301452905475,
+		rank=0.00150726452738];
+	"[3]lsu_valid_i" -> "[3]instr_multicycle_done_n";
+	"[3]id_wb_fsm_ns"	 [complexity=20,
+		importance=0.727277082919,
+		rank=0.0363638541459];
+	"[3]lsu_valid_i" -> "[3]id_wb_fsm_ns";
+	"[2]ex_valid_i"	 [complexity=19,
+		importance=0.104254602447,
+		rank=0.0054870843393];
+	"[2]instr_multicycle_done_n"	 [complexity=16,
+		importance=0.0229719815348,
+		rank=0.00143574884592];
+	"[2]ex_valid_i" -> "[2]instr_multicycle_done_n";
+	"[2]id_wb_fsm_ns"	 [complexity=15,
+		importance=0.102758639756,
+		rank=0.00685057598376];
+	"[2]ex_valid_i" -> "[2]id_wb_fsm_ns";
+	data_req_id	 [complexity=2,
+		importance=0.00458567536145,
+		rank=0.00229283768072];
+	data_req_ex_o	 [complexity=0,
+		importance=0.00252574459851,
+		rank=0.0];
+	data_req_id -> data_req_ex_o;
+	multdiv_en_dec	 [complexity=15,
+		importance=0.0144785085057,
+		rank=0.000965233900383];
+	instr_multicycle	 [complexity=10,
+		importance=0.0118000475938,
+		rank=0.00118000475938];
+	multdiv_en_dec -> instr_multicycle;
+	"decoder_i.data_req_o"	 [complexity=15,
+		importance=0.0158576062078,
+		rank=0.00105717374719];
+	data_req_dec	 [complexity=15,
+		importance=0.0141499014699,
+		rank=0.000943326764663];
+	"decoder_i.data_req_o" -> data_req_dec;
+	instr_executing	 [complexity=5,
+		importance=0.00862536350921,
+		rank=0.00172507270184];
+	instr_multicycle -> instr_executing;
+	"[2]rst_ni"	 [complexity=14,
+		importance=0.198967538705,
+		rank=0.0142119670504];
+	"[1]instr_multicycle_done_q"	 [complexity=14,
+		importance=0.0193123577055,
+		rank=0.00137945412182];
+	"[2]rst_ni" -> "[1]instr_multicycle_done_q";
+	"[1]id_wb_fsm_cs"	 [complexity=13,
+		importance=0.0987357880075,
+		rank=0.00759506061596];
+	"[2]rst_ni" -> "[1]id_wb_fsm_cs";
+	"[1]decoder_i.illegal_insn"	 [complexity=17,
+		importance=0.0393134541203,
+		rank=0.00231255612472];
+	"[1]decoder_i.data_req_o"	 [complexity=16,
+		importance=0.035654903658,
+		rank=0.00222843147862];
+	"[1]decoder_i.illegal_insn" -> "[1]decoder_i.data_req_o";
+	"[2]instr_rdata_i"	 [complexity=28,
+		importance=0.222784965204,
+		rank=0.00795660590013];
+	"[2]decoder_i.instr_rdata_i"	 [complexity=28,
+		importance=0.221289002513,
+		rank=0.00790317866118];
+	"[2]instr_rdata_i" -> "[2]decoder_i.instr_rdata_i";
+	"decoder_i.csr_illegal"	 [complexity=18,
+		importance=0.0210186225577,
+		rank=0.0011677012532];
+	"decoder_i.illegal_insn"	 [complexity=16,
+		importance=0.0195118339088,
+		rank=0.0012194896193];
+	"decoder_i.csr_illegal" -> "decoder_i.illegal_insn";
+	"[1]instr_rdata_i"	 [complexity=25,
+		importance=0.0488650307348,
+		rank=0.00195460122939];
+	"[1]decoder_i.instr_rdata_i"	 [complexity=25,
+		importance=0.0473690680444,
+		rank=0.00189476272178];
+	"[1]instr_rdata_i" -> "[1]decoder_i.instr_rdata_i";
+	"[1]instr_new_i"	 [complexity=14,
+		importance=0.0804893253003,
+		rank=0.00574923752145];
+	"[1]instr_multicycle_done_n"	 [complexity=12,
+		importance=0.015798672522,
+		rank=0.0013165560435];
+	"[1]instr_new_i" -> "[1]instr_multicycle_done_n";
+	"[1]rst_ni"	 [complexity=11,
+		importance=0.0257740600759,
+		rank=0.00234309637054];
+	instr_multicycle_done_q	 [complexity=10,
+		importance=0.0121390486928,
+		rank=0.00121390486928];
+	"[1]rst_ni" -> instr_multicycle_done_q;
+	"decoder_i.div_en_o"	 [complexity=18,
+		importance=0.0185816300259,
+		rank=0.00103231277922];
+	div_en_dec	 [complexity=18,
+		importance=0.0168435518088,
+		rank=0.000935752878266];
+	"decoder_i.div_en_o" -> div_en_dec;
+	"[3]data_req_dec"	 [complexity=24,
+		importance=1.45690401971,
+		rank=0.0607043341548];
+	"[3]data_req_dec" -> "[3]instr_multicycle_done_n";
+	"[3]data_req_dec" -> "[3]id_wb_fsm_ns";
+	"[2]instr_multicycle_done_n" -> "[1]instr_multicycle_done_q";
+	"[2]instr_multicycle_done_q"	 [complexity=18,
+		importance=0.0264856667183,
+		rank=0.00147142592879];
+	"[2]instr_multicycle_done_q" -> "[2]instr_multicycle_done_n";
+	"[1]decoder_i.illegal_c_insn_i"	 [complexity=18,
+		importance=0.0415574149928,
+		rank=0.00230874527738];
+	"[1]decoder_i.illegal_c_insn_i" -> "[1]decoder_i.illegal_insn";
+	"[1]illegal_c_insn_i"	 [complexity=18,
+		importance=0.0430533776832,
+		rank=0.00239185431573];
+	"[1]illegal_c_insn_i" -> "[1]decoder_i.illegal_c_insn_i";
+	div_en_dec -> multdiv_en_dec;
+	"[3]decoder_i.instr_rdata_i"	 [complexity=33,
+		importance=1.47032588884,
+		rank=0.0445553299648];
+	"[3]decoder_i.instr"	 [complexity=31,
+		importance=1.46845592706,
+		rank=0.0473695460341];
+	"[3]decoder_i.instr_rdata_i" -> "[3]decoder_i.instr";
+	instr_multicycle_done_q -> instr_executing;
+	"[2]instr_fetch_err_i"	 [complexity=17,
+		importance=0.412530521716,
+		rank=0.0242665012774];
+	"[2]instr_fetch_err_i" -> "[2]instr_multicycle_done_n";
+	"[2]instr_fetch_err_i" -> "[2]id_wb_fsm_ns";
+	mult_en_dec	 [complexity=18,
+		importance=0.0168435518088,
+		rank=0.000935752878266];
+	mult_en_dec -> multdiv_en_dec;
+	"[2]decoder_i.opcode"	 [complexity=23,
+		importance=0.216988110162,
+		rank=0.0094342656592];
+	"[2]decoder_i.csr_illegal"	 [complexity=22,
+		importance=0.214740177238,
+		rank=0.00976091714718];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.illegal_insn"	 [complexity=20,
+		importance=0.213233388589,
+		rank=0.0106616694295];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.illegal_insn";
+	"[2]decoder_i.data_req_o"	 [complexity=19,
+		importance=0.209574838127,
+		rank=0.0110302546382];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.data_req_o";
+	"[1]instr_multicycle_done_q" -> "[1]instr_multicycle_done_n";
+	"[1]branch_decision_i"	 [complexity=14,
+		importance=0.0172946352124,
+		rank=0.0012353310866];
+	"[1]branch_decision_i" -> "[1]instr_multicycle_done_n";
+	"[2]decoder_i.instr"	 [complexity=26,
+		importance=0.219419040732,
+		rank=0.0084391938743];
+	"[2]decoder_i.instr" -> "[2]decoder_i.opcode";
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.instr" -> "[2]decoder_i.illegal_insn";
+	"[1]instr_multicycle_done_n" -> instr_multicycle_done_q;
+	"[3]IDLE"	 [complexity=26,
+		importance=1.45605012853,
+		rank=0.0560019280203];
+	"[2]id_wb_fsm_cs"	 [complexity=18,
+		importance=0.72325423117,
+		rank=0.0401807906206];
+	"[3]IDLE" -> "[2]id_wb_fsm_cs";
+	"[3]IDLE" -> "[3]id_wb_fsm_ns";
+	"decoder_i.instr_rdata_i"	 [complexity=24,
+		importance=0.0275674478329,
+		rank=0.00114864365971];
+	"decoder_i.instr"	 [complexity=22,
+		importance=0.0256974860515,
+		rank=0.0011680675478];
+	"decoder_i.instr_rdata_i" -> "decoder_i.instr";
+	"[3]decoder_i.csr_illegal"	 [complexity=27,
+		importance=1.46377706356,
+		rank=0.0542139653172];
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_illegal";
+	"[3]decoder_i.opcode"	 [complexity=28,
+		importance=1.46602499649,
+		rank=0.0523580355888];
+	"[3]decoder_i.instr" -> "[3]decoder_i.opcode";
+	"[3]decoder_i.illegal_insn"	 [complexity=25,
+		importance=1.46227027491,
+		rank=0.0584908109966];
+	"[3]decoder_i.instr" -> "[3]decoder_i.illegal_insn";
+	"[1]id_wb_fsm_cs" -> "[1]instr_multicycle_done_n";
+	instr_fetch_err_i	 [complexity=10,
+		importance=0.0101213261996,
+		rank=0.00101213261996];
+	instr_fetch_err_i -> instr_executing;
+	jump_in_dec	 [complexity=15,
+		importance=0.0141461240867,
+		rank=0.000943074939111];
+	jump_in_dec -> instr_multicycle;
+	"[3]branch_decision_i"	 [complexity=24,
+		importance=0.728773045609,
+		rank=0.0303655435671];
+	"[3]branch_decision_i" -> "[3]instr_multicycle_done_n";
+	"[3]branch_decision_i" -> "[3]id_wb_fsm_ns";
+	"[3]instr_new_i"	 [complexity=22,
+		importance=2.91060429437,
+		rank=0.132300195198];
+	"[3]instr_new_i" -> "[3]instr_multicycle_done_n";
+	"[3]instr_new_i" -> "[3]id_wb_fsm_ns";
+	"[1]lsu_valid_i"	 [complexity=16,
+		importance=0.0172946352124,
+		rank=0.00108091470078];
+	"[1]lsu_valid_i" -> "[1]instr_multicycle_done_n";
+	"[3]id_wb_fsm_cs"	 [complexity=23,
+		importance=5.09488333331,
+		rank=0.221516666666];
+	"[3]id_wb_fsm_cs" -> "[3]instr_multicycle_done_n";
+	"[3]id_wb_fsm_cs" -> "[3]id_wb_fsm_ns";
+	instr_new_i	 [complexity=10,
+		importance=0.0101213261996,
+		rank=0.00101213261996];
+	instr_new_i -> instr_executing;
+	"[1]data_req_dec"	 [complexity=16,
+		importance=0.0339471989201,
+		rank=0.0021216999325];
+	"[1]data_req_dec" -> "[1]instr_multicycle_done_n";
+	"[2]WAIT_MULTICYCLE"	 [complexity=25,
+		importance=0.412530521716,
+		rank=0.0165012208686];
+	"[2]WAIT_MULTICYCLE" -> "[2]id_wb_fsm_ns";
+	instr_executing -> data_req_id;
+	"[3]instr_multicycle_done_q"	 [complexity=22,
+		importance=0.0336589757311,
+		rank=0.00152995344232];
+	"[3]instr_multicycle_done_q" -> "[3]instr_multicycle_done_n";
+	"[2]id_wb_fsm_ns" -> "[1]id_wb_fsm_cs";
+	"[3]instr_multicycle_done_n" -> "[2]instr_multicycle_done_q";
+	branch_in_dec	 [complexity=15,
+		importance=0.0141484605646,
+		rank=0.000943230704304];
+	branch_in_dec -> instr_multicycle;
+	"[3]rst_ni"	 [complexity=19,
+		importance=1.44800442503,
+		rank=0.0762107592121];
+	"[3]rst_ni" -> "[2]instr_multicycle_done_q";
+	"[3]rst_ni" -> "[2]id_wb_fsm_cs";
+	data_req_dec -> data_req_id;
+	data_req_dec -> instr_multicycle;
+	"[1]decoder_i.instr"	 [complexity=23,
+		importance=0.0454991062629,
+		rank=0.00197822201143];
+	"[1]decoder_i.instr_rdata_i" -> "[1]decoder_i.instr";
+	"[2]id_wb_fsm_cs" -> "[2]instr_multicycle_done_n";
+	"[2]id_wb_fsm_cs" -> "[2]id_wb_fsm_ns";
+	"[2]decoder_i.csr_illegal" -> "[2]decoder_i.illegal_insn";
+	"[3]id_wb_fsm_ns" -> "[2]id_wb_fsm_cs";
+	"[2]lsu_valid_i"	 [complexity=19,
+		importance=0.104254602447,
+		rank=0.0054870843393];
+	"[2]lsu_valid_i" -> "[2]instr_multicycle_done_n";
+	"[2]lsu_valid_i" -> "[2]id_wb_fsm_ns";
+	"decoder_i.jump_in_dec_o"	 [complexity=15,
+		importance=0.015846273452,
+		rank=0.00105641823014];
+	"decoder_i.jump_in_dec_o" -> jump_in_dec;
+	"[1]instr_fetch_err_i"	 [complexity=14,
+		importance=0.0804893253003,
+		rank=0.00574923752145];
+	"[1]instr_fetch_err_i" -> "[1]instr_multicycle_done_n";
+	"[2]decoder_i.illegal_c_insn_i"	 [complexity=21,
+		importance=0.215477349462,
+		rank=0.0102608261648];
+	"[2]decoder_i.illegal_c_insn_i" -> "[2]decoder_i.illegal_insn";
+	"[2]decoder_i.sv2v_cast_DB892"	 [complexity=26,
+		importance=0.218484072852,
+		rank=0.00840323357123];
+	"[2]decoder_i.sv2v_cast_DB892" -> "[2]decoder_i.opcode";
+	"[1]decoder_i.opcode"	 [complexity=20,
+		importance=0.0430681756928,
+		rank=0.00215340878464];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.illegal_insn";
+	"[1]decoder_i.opcode" -> "[1]decoder_i.data_req_o";
+	"[1]decoder_i.csr_illegal"	 [complexity=19,
+		importance=0.0408202427691,
+		rank=0.00214843382995];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.csr_illegal";
+	"decoder_i.mult_en_o"	 [complexity=18,
+		importance=0.0185816300259,
+		rank=0.00103231277922];
+	"decoder_i.mult_en_o" -> mult_en_dec;
+	"[1]decoder_i.instr" -> "[1]decoder_i.illegal_insn";
+	"[1]decoder_i.instr" -> "[1]decoder_i.opcode";
+	"[1]decoder_i.instr" -> "[1]decoder_i.csr_illegal";
+	"decoder_i.branch_in_dec_o"	 [complexity=15,
+		importance=0.0158532834465,
+		rank=0.0010568855631];
+	"decoder_i.branch_in_dec_o" -> branch_in_dec;
+	"[3]decoder_i.illegal_c_insn_i"	 [complexity=26,
+		importance=1.46451423579,
+		rank=0.0563274706072];
+	"[3]decoder_i.illegal_c_insn_i" -> "[3]decoder_i.illegal_insn";
+	illegal_c_insn_i	 [complexity=17,
+		importance=0.0232517574717,
+		rank=0.00136775043951];
+	"decoder_i.illegal_c_insn_i"	 [complexity=17,
+		importance=0.0217557947813,
+		rank=0.00127975263419];
+	illegal_c_insn_i -> "decoder_i.illegal_c_insn_i";
+	"[3]decoder_i.csr_illegal" -> "[3]decoder_i.illegal_insn";
+	"[2]decoder_i.instr_rdata_i" -> "[2]decoder_i.instr";
+	"[1]ex_valid_i"	 [complexity=16,
+		importance=0.0172946352124,
+		rank=0.00108091470078];
+	"[1]ex_valid_i" -> "[1]instr_multicycle_done_n";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.data_req_o";
+	"decoder_i.illegal_insn" -> "decoder_i.data_req_o";
+	"decoder_i.illegal_insn" -> "decoder_i.div_en_o";
+	"decoder_i.illegal_insn" -> "decoder_i.jump_in_dec_o";
+	"decoder_i.illegal_insn" -> "decoder_i.mult_en_o";
+	"decoder_i.illegal_insn" -> "decoder_i.branch_in_dec_o";
+	"decoder_i.illegal_c_insn_i" -> "decoder_i.illegal_insn";
+	"[2]instr_new_i"	 [complexity=17,
+		importance=0.412530521716,
+		rank=0.0242665012774];
+	"[2]instr_new_i" -> "[2]instr_multicycle_done_n";
+	"[2]instr_new_i" -> "[2]id_wb_fsm_ns";
+	"[3]ex_valid_i"	 [complexity=24,
+		importance=0.728773045609,
+		rank=0.0303655435671];
+	"[3]ex_valid_i" -> "[3]instr_multicycle_done_n";
+	"[3]ex_valid_i" -> "[3]id_wb_fsm_ns";
+	"[3]instr_fetch_err_i"	 [complexity=22,
+		importance=2.91060429437,
+		rank=0.132300195198];
+	"[3]instr_fetch_err_i" -> "[3]instr_multicycle_done_n";
+	"[3]instr_fetch_err_i" -> "[3]id_wb_fsm_ns";
+	"decoder_i.instr" -> "decoder_i.csr_illegal";
+	"decoder_i.instr" -> "decoder_i.div_en_o";
+	"decoder_i.instr" -> "decoder_i.jump_in_dec_o";
+	"decoder_i.instr" -> "decoder_i.mult_en_o";
+	"decoder_i.instr" -> "decoder_i.illegal_insn";
+	"decoder_i.opcode"	 [complexity=19,
+		importance=0.0232665554814,
+		rank=0.00122455555165];
+	"decoder_i.instr" -> "decoder_i.opcode";
+	"[2]data_req_dec"	 [complexity=19,
+		importance=0.207867133389,
+		rank=0.0109403754415];
+	"[2]data_req_dec" -> "[2]instr_multicycle_done_n";
+	"[2]data_req_dec" -> "[2]id_wb_fsm_ns";
+	"decoder_i.opcode" -> "decoder_i.data_req_o";
+	"decoder_i.opcode" -> "decoder_i.csr_illegal";
+	"decoder_i.opcode" -> "decoder_i.div_en_o";
+	"decoder_i.opcode" -> "decoder_i.jump_in_dec_o";
+	"decoder_i.opcode" -> "decoder_i.mult_en_o";
+	"decoder_i.opcode" -> "decoder_i.branch_in_dec_o";
+	"decoder_i.opcode" -> "decoder_i.illegal_insn";
+	"[1]decoder_i.data_req_o" -> "[1]data_req_dec";
+	"[3]decoder_i.sv2v_cast_DB892"	 [complexity=31,
+		importance=1.46752095918,
+		rank=0.0473393857799];
+	"[3]decoder_i.sv2v_cast_DB892" -> "[3]decoder_i.opcode";
+	"[3]illegal_c_insn_i"	 [complexity=26,
+		importance=1.46601019848,
+		rank=0.0563850076337];
+	"[3]illegal_c_insn_i" -> "[3]decoder_i.illegal_c_insn_i";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.csr_illegal";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.illegal_insn";
+	"[3]decoder_i.data_req_o"	 [complexity=24,
+		importance=1.45861172445,
+		rank=0.0607754885188];
+	"[3]decoder_i.opcode" -> "[3]decoder_i.data_req_o";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.data_req_o";
+	"[2]branch_decision_i"	 [complexity=19,
+		importance=0.104254602447,
+		rank=0.0054870843393];
+	"[2]branch_decision_i" -> "[2]instr_multicycle_done_n";
+	"[2]branch_decision_i" -> "[2]id_wb_fsm_ns";
+	"decoder_i.sv2v_cast_DB892"	 [complexity=22,
+		importance=0.0247625181718,
+		rank=0.00112556900781];
+	"decoder_i.sv2v_cast_DB892" -> "decoder_i.opcode";
+	"[1]decoder_i.sv2v_cast_DB892"	 [complexity=23,
+		importance=0.0445641383833,
+		rank=0.00193757123406];
+	"[1]decoder_i.sv2v_cast_DB892" -> "[1]decoder_i.opcode";
+	"[3]WAIT_MULTICYCLE"	 [complexity=30,
+		importance=2.91060429437,
+		rank=0.0970201431455];
+	"[3]WAIT_MULTICYCLE" -> "[3]id_wb_fsm_ns";
+	instr_rdata_i	 [complexity=24,
+		importance=0.0290634105234,
+		rank=0.00121097543847];
+	instr_rdata_i -> "decoder_i.instr_rdata_i";
+	"[3]decoder_i.data_req_o" -> "[3]data_req_dec";
+	"[2]decoder_i.data_req_o" -> "[2]data_req_dec";
+	"[2]illegal_c_insn_i"	 [complexity=21,
+		importance=0.216973312152,
+		rank=0.0103320624834];
+	"[2]illegal_c_insn_i" -> "[2]decoder_i.illegal_c_insn_i";
+	"[1]decoder_i.csr_illegal" -> "[1]decoder_i.illegal_insn";
+	"[3]instr_rdata_i"	 [complexity=33,
+		importance=1.47182185153,
+		rank=0.0446006621675];
+	"[3]instr_rdata_i" -> "[3]decoder_i.instr_rdata_i";
+	"[2]IDLE"	 [complexity=21,
+		importance=0.207013242203,
+		rank=0.00985777343825];
+	"[2]IDLE" -> "[1]id_wb_fsm_cs";
+	"[2]IDLE" -> "[2]id_wb_fsm_ns";
+}

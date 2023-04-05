@@ -1,0 +1,284 @@
+strict digraph "" {
+	"[3]decoder_i.instr_rdata_i"	 [complexity=26,
+		importance=1.08544183779,
+		rank=0.041747762992];
+	"[3]decoder_i.instr"	 [complexity=24,
+		importance=1.08357187601,
+		rank=0.0451488281671];
+	"[3]decoder_i.instr_rdata_i" -> "[3]decoder_i.instr";
+	"[2]instr_fetch_err_i"	 [complexity=10,
+		importance=0.302563649988,
+		rank=0.0302563649988];
+	"[2]id_wb_fsm_ns"	 [complexity=8,
+		importance=0.0752669218244,
+		rank=0.00940836522806];
+	"[2]instr_fetch_err_i" -> "[2]id_wb_fsm_ns";
+	"[3]lsu_valid_i"	 [complexity=17,
+		importance=0.536331020086,
+		rank=0.0315488835345];
+	"[3]id_wb_fsm_ns"	 [complexity=13,
+		importance=0.534835057396,
+		rank=0.0411411582612];
+	"[3]lsu_valid_i" -> "[3]id_wb_fsm_ns";
+	"[2]ex_valid_i"	 [complexity=12,
+		importance=0.0767628845149,
+		rank=0.00639690704291];
+	"[2]ex_valid_i" -> "[2]id_wb_fsm_ns";
+	"[1]decoder_i.instr_rdata_i"	 [complexity=16,
+		importance=0.0350003850576,
+		rank=0.0021875240661];
+	"[1]decoder_i.instr"	 [complexity=14,
+		importance=0.0331304232761,
+		rank=0.00236645880544];
+	"[1]decoder_i.instr_rdata_i" -> "[1]decoder_i.instr";
+	"[2]instr_new_i"	 [complexity=10,
+		importance=0.302563649988,
+		rank=0.0302563649988];
+	"[2]instr_new_i" -> "[2]id_wb_fsm_ns";
+	"[2]id_wb_fsm_cs"	 [complexity=11,
+		importance=0.530812205647,
+		rank=0.0482556550588];
+	"[2]id_wb_fsm_cs" -> "[2]id_wb_fsm_ns";
+	"[1]id_wb_fsm_ns"	 [complexity=3,
+		importance=0.00961433102857,
+		rank=0.00320477700952];
+	id_wb_fsm_cs	 [complexity=1,
+		importance=0.00559147927967,
+		rank=0.00559147927967];
+	"[1]id_wb_fsm_ns" -> id_wb_fsm_cs;
+	perf_branch_o	 [complexity=0,
+		importance=0.00164772640408,
+		rank=0.0];
+	"[2]decoder_i.csr_illegal"	 [complexity=15,
+		importance=0.159756741374,
+		rank=0.0106504494249];
+	"[2]decoder_i.illegal_insn"	 [complexity=13,
+		importance=0.158249952725,
+		rank=0.0121730732866];
+	"[2]decoder_i.csr_illegal" -> "[2]decoder_i.illegal_insn";
+	"[1]branch_decision_i"	 [complexity=7,
+		importance=0.011110293719,
+		rank=0.001587184817];
+	"[1]branch_decision_i" -> "[1]id_wb_fsm_ns";
+	"[3]id_wb_fsm_ns" -> "[2]id_wb_fsm_cs";
+	"[2]decoder_i.instr"	 [complexity=19,
+		importance=0.164435604868,
+		rank=0.00865450551936];
+	"[2]decoder_i.instr" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.opcode"	 [complexity=16,
+		importance=0.162004674298,
+		rank=0.0101252921436];
+	"[2]decoder_i.instr" -> "[2]decoder_i.opcode";
+	"[2]decoder_i.instr" -> "[2]decoder_i.illegal_insn";
+	"[2]data_req_dec"	 [complexity=12,
+		importance=0.152883697525,
+		rank=0.0127403081271];
+	"[2]data_req_dec" -> "[2]id_wb_fsm_ns";
+	id_wb_fsm_cs -> perf_branch_o;
+	"[2]rst_ni"	 [complexity=7,
+		importance=0.143984102842,
+		rank=0.0205691575488];
+	"[1]id_wb_fsm_cs"	 [complexity=6,
+		importance=0.0712440700755,
+		rank=0.0118740116793];
+	"[2]rst_ni" -> "[1]id_wb_fsm_cs";
+	"[3]IDLE"	 [complexity=19,
+		importance=1.07116607748,
+		rank=0.0563771619727];
+	"[3]IDLE" -> "[2]id_wb_fsm_cs";
+	"[3]IDLE" -> "[3]id_wb_fsm_ns";
+	"[3]branch_decision_i"	 [complexity=17,
+		importance=0.536331020086,
+		rank=0.0315488835345];
+	"[3]branch_decision_i" -> "[3]id_wb_fsm_ns";
+	"[3]decoder_i.illegal_insn"	 [complexity=18,
+		importance=1.07738622387,
+		rank=0.0598547902149];
+	"[3]decoder_i.instr" -> "[3]decoder_i.illegal_insn";
+	"[3]decoder_i.csr_illegal"	 [complexity=20,
+		importance=1.07889301252,
+		rank=0.0539446506258];
+	"[3]decoder_i.instr" -> "[3]decoder_i.csr_illegal";
+	"[3]decoder_i.opcode"	 [complexity=21,
+		importance=1.08114094544,
+		rank=0.0514829021638];
+	"[3]decoder_i.instr" -> "[3]decoder_i.opcode";
+	"[1]IDLE"	 [complexity=9,
+		importance=0.0207246247476,
+		rank=0.00230273608306];
+	"[1]IDLE" -> "[1]id_wb_fsm_ns";
+	"[1]IDLE" -> id_wb_fsm_cs;
+	"[1]id_wb_fsm_cs" -> "[1]id_wb_fsm_ns";
+	instr_fetch_err_i	 [complexity=2,
+		importance=0.00314368909451,
+		rank=0.00157184454726];
+	instr_fetch_err_i -> perf_branch_o;
+	"[1]lsu_valid_i"	 [complexity=7,
+		importance=0.011110293719,
+		rank=0.001587184817];
+	"[1]lsu_valid_i" -> "[1]id_wb_fsm_ns";
+	"[3]illegal_c_insn_i"	 [complexity=19,
+		importance=1.08112614743,
+		rank=0.0569013761805];
+	"[3]decoder_i.illegal_c_insn_i"	 [complexity=19,
+		importance=1.07963018474,
+		rank=0.0568226413021];
+	"[3]illegal_c_insn_i" -> "[3]decoder_i.illegal_c_insn_i";
+	"[1]instr_fetch_err_i"	 [complexity=5,
+		importance=0.0399532868047,
+		rank=0.00799065736094];
+	"[1]instr_fetch_err_i" -> "[1]id_wb_fsm_ns";
+	"[2]instr_rdata_i"	 [complexity=21,
+		importance=0.16780152934,
+		rank=0.00799054901618];
+	"[2]decoder_i.instr_rdata_i"	 [complexity=21,
+		importance=0.166305566649,
+		rank=0.00791931269759];
+	"[2]instr_rdata_i" -> "[2]decoder_i.instr_rdata_i";
+	"[2]decoder_i.illegal_c_insn_i"	 [complexity=14,
+		importance=0.160493913598,
+		rank=0.0114638509713];
+	"[2]decoder_i.illegal_c_insn_i" -> "[2]decoder_i.illegal_insn";
+	"[1]decoder_i.data_req_o"	 [complexity=7,
+		importance=0.0232862206711,
+		rank=0.00332660295302];
+	"[1]data_req_dec"	 [complexity=7,
+		importance=0.0215785159332,
+		rank=0.00308264513332];
+	"[1]decoder_i.data_req_o" -> "[1]data_req_dec";
+	"[3]decoder_i.sv2v_cast_DB892"	 [complexity=24,
+		importance=1.08263690813,
+		rank=0.0451098711721];
+	"[3]decoder_i.sv2v_cast_DB892" -> "[3]decoder_i.opcode";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.csr_illegal";
+	"[2]decoder_i.data_req_o"	 [complexity=12,
+		importance=0.154591402263,
+		rank=0.0128826168552];
+	"[2]decoder_i.opcode" -> "[2]decoder_i.data_req_o";
+	"[2]decoder_i.opcode" -> "[2]decoder_i.illegal_insn";
+	"[3]ex_valid_i"	 [complexity=17,
+		importance=0.536331020086,
+		rank=0.0315488835345];
+	"[3]ex_valid_i" -> "[3]id_wb_fsm_ns";
+	"[1]instr_rdata_i"	 [complexity=16,
+		importance=0.036496347748,
+		rank=0.00228102173425];
+	"[1]instr_rdata_i" -> "[1]decoder_i.instr_rdata_i";
+	"[2]decoder_i.sv2v_cast_DB892"	 [complexity=19,
+		importance=0.163500636988,
+		rank=0.00860529668359];
+	"[2]decoder_i.sv2v_cast_DB892" -> "[2]decoder_i.opcode";
+	"[1]instr_new_i"	 [complexity=5,
+		importance=0.0399532868047,
+		rank=0.00799065736094];
+	"[1]instr_new_i" -> "[1]id_wb_fsm_ns";
+	"[1]rst_ni"	 [complexity=2,
+		importance=0.0126789212498,
+		rank=0.00633946062489];
+	"[1]rst_ni" -> id_wb_fsm_cs;
+	"[1]illegal_c_insn_i"	 [complexity=9,
+		importance=0.0306846946964,
+		rank=0.00340941052182];
+	"[1]decoder_i.illegal_c_insn_i"	 [complexity=9,
+		importance=0.0291887320059,
+		rank=0.0032431924451];
+	"[1]illegal_c_insn_i" -> "[1]decoder_i.illegal_c_insn_i";
+	"[2]branch_decision_i"	 [complexity=12,
+		importance=0.0767628845149,
+		rank=0.00639690704291];
+	"[2]branch_decision_i" -> "[2]id_wb_fsm_ns";
+	"[1]decoder_i.sv2v_cast_DB892"	 [complexity=14,
+		importance=0.0321954553965,
+		rank=0.00229967538546];
+	"[1]decoder_i.opcode"	 [complexity=11,
+		importance=0.030699492706,
+		rank=0.00279086297327];
+	"[1]decoder_i.sv2v_cast_DB892" -> "[1]decoder_i.opcode";
+	"[3]instr_new_i"	 [complexity=15,
+		importance=2.14083619227,
+		rank=0.142722412818];
+	"[3]instr_new_i" -> "[3]id_wb_fsm_ns";
+	"[1]decoder_i.opcode" -> "[1]decoder_i.data_req_o";
+	"[1]decoder_i.illegal_insn"	 [complexity=8,
+		importance=0.0269447711335,
+		rank=0.00336809639168];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.illegal_insn";
+	"[1]decoder_i.csr_illegal"	 [complexity=10,
+		importance=0.0284515597823,
+		rank=0.00284515597823];
+	"[1]decoder_i.opcode" -> "[1]decoder_i.csr_illegal";
+	"[2]lsu_valid_i"	 [complexity=12,
+		importance=0.0767628845149,
+		rank=0.00639690704291];
+	"[2]lsu_valid_i" -> "[2]id_wb_fsm_ns";
+	"[3]data_req_dec"	 [complexity=17,
+		importance=1.07201996867,
+		rank=0.0630599981569];
+	"[3]data_req_dec" -> "[3]id_wb_fsm_ns";
+	"[3]WAIT_MULTICYCLE"	 [complexity=23,
+		importance=2.14083619227,
+		rank=0.0930798344466];
+	"[3]WAIT_MULTICYCLE" -> "[3]id_wb_fsm_ns";
+	instr_new_i	 [complexity=2,
+		importance=0.00314368909451,
+		rank=0.00157184454726];
+	instr_new_i -> perf_branch_o;
+	"[1]decoder_i.instr" -> "[1]decoder_i.opcode";
+	"[1]decoder_i.instr" -> "[1]decoder_i.illegal_insn";
+	"[1]decoder_i.instr" -> "[1]decoder_i.csr_illegal";
+	"[1]data_req_dec" -> "[1]id_wb_fsm_ns";
+	"[2]WAIT_MULTICYCLE"	 [complexity=18,
+		importance=0.302563649988,
+		rank=0.016809091666];
+	"[2]WAIT_MULTICYCLE" -> "[2]id_wb_fsm_ns";
+	"[1]decoder_i.illegal_c_insn_i" -> "[1]decoder_i.illegal_insn";
+	"[1]decoder_i.illegal_insn" -> "[1]decoder_i.data_req_o";
+	"[3]decoder_i.data_req_o"	 [complexity=17,
+		importance=1.07372767341,
+		rank=0.0631604513768];
+	"[3]decoder_i.data_req_o" -> "[3]data_req_dec";
+	"[3]decoder_i.illegal_insn" -> "[3]decoder_i.data_req_o";
+	"[3]decoder_i.csr_illegal" -> "[3]decoder_i.illegal_insn";
+	"[2]decoder_i.instr_rdata_i" -> "[2]decoder_i.instr";
+	"[2]decoder_i.data_req_o" -> "[2]data_req_dec";
+	"[1]ex_valid_i"	 [complexity=7,
+		importance=0.011110293719,
+		rank=0.001587184817];
+	"[1]ex_valid_i" -> "[1]id_wb_fsm_ns";
+	"[2]illegal_c_insn_i"	 [complexity=14,
+		importance=0.161989876288,
+		rank=0.0115707054492];
+	"[2]illegal_c_insn_i" -> "[2]decoder_i.illegal_c_insn_i";
+	"[1]decoder_i.csr_illegal" -> "[1]decoder_i.illegal_insn";
+	"[1]WAIT_MULTICYCLE"	 [complexity=13,
+		importance=0.0399532868047,
+		rank=0.00307332975421];
+	"[1]WAIT_MULTICYCLE" -> "[1]id_wb_fsm_ns";
+	"[3]instr_fetch_err_i"	 [complexity=15,
+		importance=2.14083619227,
+		rank=0.142722412818];
+	"[3]instr_fetch_err_i" -> "[3]id_wb_fsm_ns";
+	"[3]id_wb_fsm_cs"	 [complexity=16,
+		importance=3.74778915464,
+		rank=0.234236822165];
+	"[3]id_wb_fsm_cs" -> "[3]id_wb_fsm_ns";
+	"[2]id_wb_fsm_ns" -> "[1]id_wb_fsm_cs";
+	"[3]instr_rdata_i"	 [complexity=26,
+		importance=1.08693780048,
+		rank=0.0418053000185];
+	"[3]instr_rdata_i" -> "[3]decoder_i.instr_rdata_i";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.data_req_o";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.illegal_insn";
+	"[3]decoder_i.opcode" -> "[3]decoder_i.csr_illegal";
+	"[2]IDLE"	 [complexity=14,
+		importance=0.152029806339,
+		rank=0.0108592718814];
+	"[2]IDLE" -> "[1]id_wb_fsm_cs";
+	"[2]IDLE" -> "[2]id_wb_fsm_ns";
+	"[3]rst_ni"	 [complexity=12,
+		importance=1.06312037398,
+		rank=0.0885933644986];
+	"[3]rst_ni" -> "[2]id_wb_fsm_cs";
+	"[2]decoder_i.illegal_insn" -> "[2]decoder_i.data_req_o";
+	"[3]decoder_i.illegal_c_insn_i" -> "[3]decoder_i.illegal_insn";
+}

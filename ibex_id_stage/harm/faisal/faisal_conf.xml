@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<faisal>
+    <vlog arguments="-sv src/ibex_decoder.v src/ibex_controller.v src/ibex_multdiv_slow.v src/ibex_pkg.v src/ibex_register_file_ff.v src/ibex_id_stage.v src/ibex_id_stage_bench.v" />
+    <simulate name="ibex_id_stage_bench"/>
+    <dumpVCD value="ibex_id_stage_bench/ibex_id_stage_/*"/>
+    <nFaults value="1002"/>
+</faisal>

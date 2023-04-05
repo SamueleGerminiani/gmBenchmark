@@ -1,0 +1,141 @@
+<harm>
+	<context name="default">
+
+		<prop exp="perf_tbranch_o" loc="a,dt"/>
+		<prop exp="perf_jump_o" loc="a,dt"/>
+		<prop exp="csr_mtval_o[0]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[1]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[2]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[3]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[4]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[5]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[6]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[7]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[8]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[9]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[10]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[11]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[12]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[13]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[14]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[15]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[16]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[17]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[18]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[19]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[20]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[21]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[22]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[23]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[24]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[25]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[26]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[27]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[28]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[29]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[30]" loc="a,dt"/>
+		<prop exp="csr_mtval_o[31]" loc="a,dt"/>
+		<prop exp="csr_restore_dret_id_o" loc="a,dt"/>
+		<prop exp="csr_restore_mret_id_o" loc="a,dt"/>
+		<prop exp="ctrl_busy_o" loc="a,dt"/>
+		<prop exp="csr_save_cause_o" loc="a,dt"/>
+		<prop exp="instr_valid_clear_o" loc="a,dt"/>
+		<prop exp="pc_set_o" loc="a,dt"/>
+		<prop exp="id_in_ready_o" loc="a,dt"/>
+		<prop exp="exc_pc_mux_o[0]" loc="a,dt"/>
+		<prop exp="exc_pc_mux_o[1]" loc="a,dt"/>
+		<prop exp="pc_mux_o[0]" loc="a,dt"/>
+		<prop exp="pc_mux_o[1]" loc="a,dt"/>
+		<prop exp="pc_mux_o[2]" loc="a,dt"/>
+		<prop exp="debug_cause_o[0]" loc="a,dt"/>
+		<prop exp="debug_cause_o[1]" loc="a,dt"/>
+		<prop exp="debug_cause_o[2]" loc="a,dt"/>
+		<prop exp="exc_cause_o[0]" loc="a,dt"/>
+		<prop exp="exc_cause_o[1]" loc="a,dt"/>
+		<prop exp="exc_cause_o[2]" loc="a,dt"/>
+		<prop exp="exc_cause_o[3]" loc="a,dt"/>
+		<prop exp="exc_cause_o[4]" loc="a,dt"/>
+		<prop exp="exc_cause_o[5]" loc="a,dt"/>
+		<prop exp="debug_csr_save_o" loc="a,dt"/>
+		<prop exp="debug_mode_o" loc="a,dt"/>
+		<prop exp="csr_save_if_o" loc="a,dt"/>
+		<prop exp="instr_req_o" loc="a,dt"/>
+		<prop exp="csr_save_id_o" loc="a,dt"/>
+		<prop exp="perf_tbranch_o" loc="c"/>
+		<prop exp="perf_jump_o" loc="c"/>
+		<prop exp="csr_mtval_o[0]" loc="c"/>
+		<prop exp="csr_mtval_o[1]" loc="c"/>
+		<prop exp="csr_mtval_o[2]" loc="c"/>
+		<prop exp="csr_mtval_o[3]" loc="c"/>
+		<prop exp="csr_mtval_o[4]" loc="c"/>
+		<prop exp="csr_mtval_o[5]" loc="c"/>
+		<prop exp="csr_mtval_o[6]" loc="c"/>
+		<prop exp="csr_mtval_o[7]" loc="c"/>
+		<prop exp="csr_mtval_o[8]" loc="c"/>
+		<prop exp="csr_mtval_o[9]" loc="c"/>
+		<prop exp="csr_mtval_o[10]" loc="c"/>
+		<prop exp="csr_mtval_o[11]" loc="c"/>
+		<prop exp="csr_mtval_o[12]" loc="c"/>
+		<prop exp="csr_mtval_o[13]" loc="c"/>
+		<prop exp="csr_mtval_o[14]" loc="c"/>
+		<prop exp="csr_mtval_o[15]" loc="c"/>
+		<prop exp="csr_mtval_o[16]" loc="c"/>
+		<prop exp="csr_mtval_o[17]" loc="c"/>
+		<prop exp="csr_mtval_o[18]" loc="c"/>
+		<prop exp="csr_mtval_o[19]" loc="c"/>
+		<prop exp="csr_mtval_o[20]" loc="c"/>
+		<prop exp="csr_mtval_o[21]" loc="c"/>
+		<prop exp="csr_mtval_o[22]" loc="c"/>
+		<prop exp="csr_mtval_o[23]" loc="c"/>
+		<prop exp="csr_mtval_o[24]" loc="c"/>
+		<prop exp="csr_mtval_o[25]" loc="c"/>
+		<prop exp="csr_mtval_o[26]" loc="c"/>
+		<prop exp="csr_mtval_o[27]" loc="c"/>
+		<prop exp="csr_mtval_o[28]" loc="c"/>
+		<prop exp="csr_mtval_o[29]" loc="c"/>
+		<prop exp="csr_mtval_o[30]" loc="c"/>
+		<prop exp="csr_mtval_o[31]" loc="c"/>
+		<prop exp="csr_restore_dret_id_o" loc="c"/>
+		<prop exp="csr_restore_mret_id_o" loc="c"/>
+		<prop exp="ctrl_busy_o" loc="c"/>
+		<prop exp="csr_save_cause_o" loc="c"/>
+		<prop exp="instr_valid_clear_o" loc="c"/>
+		<prop exp="pc_set_o" loc="c"/>
+		<prop exp="id_in_ready_o" loc="c"/>
+		<prop exp="exc_pc_mux_o[0]" loc="c"/>
+		<prop exp="exc_pc_mux_o[1]" loc="c"/>
+		<prop exp="pc_mux_o[0]" loc="c"/>
+		<prop exp="pc_mux_o[1]" loc="c"/>
+		<prop exp="pc_mux_o[2]" loc="c"/>
+		<prop exp="debug_cause_o[0]" loc="c"/>
+		<prop exp="debug_cause_o[1]" loc="c"/>
+		<prop exp="debug_cause_o[2]" loc="c"/>
+		<prop exp="exc_cause_o[0]" loc="c"/>
+		<prop exp="exc_cause_o[1]" loc="c"/>
+		<prop exp="exc_cause_o[2]" loc="c"/>
+		<prop exp="exc_cause_o[3]" loc="c"/>
+		<prop exp="exc_cause_o[4]" loc="c"/>
+		<prop exp="exc_cause_o[5]" loc="c"/>
+		<prop exp="debug_csr_save_o" loc="c"/>
+		<prop exp="debug_mode_o" loc="c"/>
+		<prop exp="csr_save_if_o" loc="c"/>
+		<prop exp="instr_req_o" loc="c"/>
+		<prop exp="csr_save_id_o" loc="c"/>
+
+
+
+		<template dtLimits="3A,-0.1E" exp="G({..&&..}|-> X(P0))" /> 
+		<template dtLimits="3D,3W,3A,-0.1E,R" exp="G({..#1&..}|-> X(P0))" /> 
+		<template dtLimits="3A,-0.1E,R" exp="G({..##1..}|-> X(P0))" /> 
+		<template dtLimits="3D,3W,3A,-0.1E,S" exp="G({..#1&..}|-> X(P0))" /> 
+		<template dtLimits="3A,-0.1E,S" exp="G({..##1..}|-> X(P0))" /> 
+
+
+
+		<sort name="causality" exp="1-afct/traceLength"/>
+		<sort name="frequency" exp="atct/traceLength"/>
+	</context>
+</harm>
+
+
+

@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<faisal>
+    <vlog arguments="-sv src/ibex_controller.v src/ibex_controller_bench.v src/ibex_pkg.v" />
+    <simulate name="ibex_controller_bench"/>
+    <dumpVCD value="ibex_controller_bench/ibex_controller_/*"/>
+    <nFaults value="926"/>
+</faisal>
