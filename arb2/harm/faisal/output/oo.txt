@@ -1,0 +1,8 @@
+fault,diff
+output/fp_num_9.vcd,49.950050
+output/fp_num_4.vcd,25.774226
+output/fp_num_2.vcd,25.774226
+output/fp_num_11.vcd,25.224775
+output/fp_num_12.vcd,25.224775
+output/fp_num_10.vcd,24.775225
+output/fp_num_1.vcd,15.484515

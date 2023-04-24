@@ -1,0 +1,123 @@
+
+<harm>
+  <context name="default">
+
+      <prop exp="instr_i[0]" loc="dt"/>
+      <prop exp="instr_i[1]" loc="dt"/>
+      <prop exp="instr_i[2]" loc="dt"/>
+      <prop exp="instr_i[3]" loc="dt"/>
+      <prop exp="instr_i[4]" loc="dt"/>
+      <prop exp="instr_i[5]" loc="dt"/>
+      <prop exp="instr_i[6]" loc="dt"/>
+      <prop exp="instr_i[7]" loc="dt"/>
+      <prop exp="instr_i[8]" loc="dt"/>
+      <prop exp="instr_i[9]" loc="dt"/>
+      <prop exp="instr_i[10]" loc="dt"/>
+      <prop exp="instr_i[11]" loc="dt"/>
+      <prop exp="instr_i[12]" loc="dt"/>
+      <prop exp="instr_i[13]" loc="dt"/>
+      <prop exp="instr_i[14]" loc="dt"/>
+      <prop exp="instr_i[15]" loc="dt"/>
+      <prop exp="instr_i[16]" loc="dt"/>
+      <prop exp="instr_i[17]" loc="dt"/>
+      <prop exp="instr_i[18]" loc="dt"/>
+      <prop exp="instr_i[19]" loc="dt"/>
+      <prop exp="instr_i[20]" loc="dt"/>
+      <prop exp="instr_i[21]" loc="dt"/>
+      <prop exp="instr_i[22]" loc="dt"/>
+      <prop exp="instr_i[23]" loc="dt"/>
+      <prop exp="instr_i[24]" loc="dt"/>
+      <prop exp="instr_i[25]" loc="dt"/>
+      <prop exp="instr_i[26]" loc="dt"/>
+      <prop exp="instr_i[27]" loc="dt"/>
+      <prop exp="instr_i[28]" loc="dt"/>
+      <prop exp="instr_i[29]" loc="dt"/>
+      <prop exp="instr_i[30]" loc="dt"/>
+
+      <prop exp="instr_o[0]" loc="c"/>
+      <prop exp="instr_o[1]" loc="c"/>
+      <prop exp="instr_o[2]" loc="c"/>
+      <prop exp="instr_o[3]" loc="c"/>
+      <prop exp="instr_o[4]" loc="c"/>
+      <prop exp="instr_o[5]" loc="c"/>
+      <prop exp="instr_o[6]" loc="c"/>
+      <prop exp="instr_o[7]" loc="c"/>
+      <prop exp="instr_o[8]" loc="c"/>
+      <prop exp="instr_o[9]" loc="c"/>
+      <prop exp="instr_o[10]" loc="c"/>
+      <prop exp="instr_o[11]" loc="c"/>
+      <prop exp="instr_o[12]" loc="c"/>
+      <prop exp="instr_o[13]" loc="c"/>
+      <prop exp="instr_o[14]" loc="c"/>
+      <prop exp="instr_o[15]" loc="c"/>
+      <prop exp="instr_o[16]" loc="c"/>
+      <prop exp="instr_o[17]" loc="c"/>
+      <prop exp="instr_o[18]" loc="c"/>
+      <prop exp="instr_o[19]" loc="c"/>
+      <prop exp="instr_o[20]" loc="c"/>
+      <prop exp="instr_o[21]" loc="c"/>
+      <prop exp="instr_o[22]" loc="c"/>
+      <prop exp="instr_o[23]" loc="c"/>
+      <prop exp="instr_o[24]" loc="c"/>
+      <prop exp="instr_o[25]" loc="c"/>
+      <prop exp="instr_o[26]" loc="c"/>
+      <prop exp="instr_o[27]" loc="c"/>
+      <prop exp="instr_o[28]" loc="c"/>
+      <prop exp="instr_o[29]" loc="c"/>
+      <prop exp="instr_o[30]" loc="c"/>
+
+      <prop exp="!instr_o[0]" loc="c"/>
+      <prop exp="!instr_o[1]" loc="c"/>
+      <prop exp="!instr_o[2]" loc="c"/>
+      <prop exp="!instr_o[3]" loc="c"/>
+      <prop exp="!instr_o[4]" loc="c"/>
+      <prop exp="!instr_o[5]" loc="c"/>
+      <prop exp="!instr_o[6]" loc="c"/>
+      <prop exp="!instr_o[7]" loc="c"/>
+      <prop exp="!instr_o[8]" loc="c"/>
+      <prop exp="!instr_o[9]" loc="c"/>
+      <prop exp="!instr_o[10]" loc="c"/>
+      <prop exp="!instr_o[11]" loc="c"/>
+      <prop exp="!instr_o[12]" loc="c"/>
+      <prop exp="!instr_o[13]" loc="c"/>
+      <prop exp="!instr_o[14]" loc="c"/>
+      <prop exp="!instr_o[15]" loc="c"/>
+      <prop exp="!instr_o[16]" loc="c"/>
+      <prop exp="!instr_o[17]" loc="c"/>
+      <prop exp="!instr_o[18]" loc="c"/>
+      <prop exp="!instr_o[19]" loc="c"/>
+      <prop exp="!instr_o[20]" loc="c"/>
+      <prop exp="!instr_o[21]" loc="c"/>
+      <prop exp="!instr_o[22]" loc="c"/>
+      <prop exp="!instr_o[23]" loc="c"/>
+      <prop exp="!instr_o[24]" loc="c"/>
+      <prop exp="!instr_o[25]" loc="c"/>
+      <prop exp="!instr_o[26]" loc="c"/>
+      <prop exp="!instr_o[27]" loc="c"/>
+      <prop exp="!instr_o[28]" loc="c"/>
+      <prop exp="!instr_o[29]" loc="c"/>
+      <prop exp="!instr_o[30]" loc="c"/>
+
+
+      <prop exp="illegal_instr_o" loc="c"/>
+      <prop exp="is_compressed_o" loc="c"/>
+      <prop exp="!illegal_instr_o" loc="c"/>
+      <prop exp="!is_compressed_o" loc="c"/>
+
+      <sort name="causality" exp="1-afct/traceLength"/>
+      <sort name="frequency" exp="atct/traceLength"/>
+
+      <!--
+          > 90% coverage
+      <template dtLimits="9A,0E" exp="G({..&&..}|-> P0)" />
+      -->
+      <template dtLimits="9A,-0.1E" exp="G({..&&..}|-> P0)" />
+      <template dtLimits="9A,-0.1E" exp="G({..&&..}|-> P0 && P1)" />
+
+      <!--
+          57% coverage
+      <template dtLimits="9A,0E" exp="G({..&&..}|-> P0)" />
+      -->
+  </context>
+</harm>
+

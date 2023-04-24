@@ -1,6 +1,4 @@
-
-
-`define GENERATE_FAULT_INJECTION_FUNCTION(FUN_NAME, WIDTH) \
+`define GENERATE_FAULT_INJECTION_BIT_FLIP_FUNCTION(FUN_NAME, WIDTH) \
 	function [WIDTH-1:0] FUN_NAME; \
 		input [WIDTH-1:0] _var; \
 		input [63:0] toggle_start; \
@@ -14,19 +12,16 @@
 		end \
 	endfunction
 
-`define GENERATE_TRANS_FAULT_INJECTION_FUNCTION(FUN_NAME, WIDTH) \
+`define GENERATE_FAULT_INJECTION_SA_ZERO_FUNCTION(FUN_NAME, WIDTH) \
 	function [WIDTH-1:0] FUN_NAME; \
 		input [WIDTH-1:0] _var; \
 		input [63:0] toggle_start; \
 		input [63:0] toggle_end; \
-		reg [WIDTH-1:0] mask; \
-    integer f; \
 		begin \
-			mask = (`fp < toggle_start || `fp > toggle_end || $urandom%10 !=0) \
-				? 0 : (1 << (`fp - toggle_start)); \
-			FUN_NAME = _var ^ mask; \
+			FUN_NAME = (`fp < toggle_start || `fp > toggle_end) ? _var : _var & ~({{WIDTH-1{1'b0}}, 1'b1} << (`fp-toggle_start)); \
 		end \
 	endfunction
+
 
 
 `define F_PLUS 8'd0
@@ -34,7 +29,7 @@
 `define F_TIMES 8'd2
 `define F_DIV 8'd3
 
-`define GENERATE_MUTANT_INJECTION_FUNCTION(FUN_NAME, WIDTH) \
+`define GENERATE_MUTANT_INJECTION_ARITHMETIC_FUNCTION(FUN_NAME, WIDTH) \
 	function [WIDTH-1:0] FUN_NAME; \
 		input [WIDTH-1:0] var1; \
 		input [WIDTH-1:0] var2; \
@@ -100,8 +95,8 @@
 	function [WIDTH-1:0] FUN_NAME; \
 		input [WIDTH-1:0] var1; \
 		input [WIDTH-1:0] var2; \
-		input [63:0] toggle_start; \
-		input [63:0] toggle_end; \
+		input [7:0] toggle_start; \
+		input [7:0] toggle_end; \
 		input [4:0] oper; \
 		reg    [2:0] flag; \
     integer i, f; \

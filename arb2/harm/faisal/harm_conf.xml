@@ -1,0 +1,14 @@
+
+<harm>
+  <context name="default">
+
+      <prop exp="req1" loc="dt"/>
+      <prop exp="req2" loc="dt"/>
+
+      <prop exp="gnt1" loc="c"/>
+      <prop exp="gnt2" loc="c"/>
+
+      <template dtLimits="2D,2W,2A,1E,R,O,N" exp="G({..#1&..}|-> P0)" />
+  </context>
+</harm>
+

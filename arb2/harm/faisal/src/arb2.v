@@ -1,6 +1,6 @@
 `include "faisal.v"
 module arb2(clk, rst, req1, req2, gnt1, gnt2);
-`GENERATE_FAULT_INJECTION_FUNCTION(fault_inj1, 1)
+`GENERATE_FAULT_INJECTION_BIT_FLIP_FUNCTION(fault_inj1, 1)
 
 input clk, rst;
 input req1, req2;

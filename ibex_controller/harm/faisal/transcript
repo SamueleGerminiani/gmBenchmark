@@ -1,5 +1,5 @@
 # vsim -voptargs="+acc" -c work.ibex_controller_bench -do "vcd add -dumpports -file "inPorts.vcd" -in ibex_controller_bench/ibex_controller_/*; vcd add -file "inPorts.vcd" ibex_controller_bench/ibex_controller_/*clk_i; run -all; exit" 
-# Start time: 17:36:17 on Apr 05,2023
+# Start time: 12:03:55 on Apr 24,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2019.4 Oct 15 2019 Linux 5.19.0-38-generic
 # //
@@ -22,5 +22,5 @@
 #  run -all
 # ** Note: $finish    : src/ibex_controller_bench.v(130)
 #    Time: 50026 ns  Iteration: 0  Instance: /ibex_controller_bench
-# End time: 17:36:18 on Apr 05,2023, Elapsed time: 0:00:01
+# End time: 12:03:55 on Apr 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
